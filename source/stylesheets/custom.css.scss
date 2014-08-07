@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5 {
 #theimprov {
   background-color: $topWhite;
   padding-top: 5vh;
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
 }
 
 #thetoast {
@@ -84,16 +84,13 @@ section+section {
   background-color: $box2;
 }
 
-p {
-  padding-bottom: 2vh;
-}
-
-
 /*------------------------------------*\
     $General Content
 \*------------------------------------*/
 
-
+.howtoimprov p {
+  margin-bottom: 10px;
+}
 
 #brand {
   // height: 95vh;
@@ -138,6 +135,9 @@ figurecaption {
   margin-right: 2%;
   margin-left: 0;
 }
+
+
+
 
 
 
@@ -312,9 +312,62 @@ hr {
 
 
 
+
+
+.onpaper {
+  margin:40px auto;
+  width:75%;
+  background: #f7f4e8 url(../images/paper_bkd.jpg);
+  padding: 3% 6%;
+}
+
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.effect2
+{
+  position: relative;
+}
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  box-shadow: 0 15px 10px #777;
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+
+
+
+
+
+
 /*------------------------------------*\
     $MEDIA QUERY
 \*------------------------------------*/
+
+
+
+@media screen and (max-width: 1080px) {
+  .onpaper {
+    width: 85%;
+  }
+
+}
+
 @media screen and (max-width: 992px) {
   .toastrightpics {
     padding-top: 0;
@@ -351,16 +404,26 @@ hr {
 }
 
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 375px) {
 
 
-  footer li + li {
-    margin-left: 13px;
-  }
-  
-  h1 {
-    font-size: 28px;
+
+.navholder {
+
+  &+& {
+    margin-left: 1%;
   }
 }
 
 
+
+  .navicon {
+    height: 85px;
+    width: 85px;
+
+    i {
+      font-size: 30px;
+    }
+  }
+
+}

@@ -1,0 +1,366 @@
+@charset "utf-8";
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/*
+IMPORTS
+MAIN
+CAROUSEL
+*/
+
+
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+// @import "reset";
+@import "variables";
+
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+body {
+  font-family: $globalFont;
+  font-size: $bodyCopy;
+  background-color: white;
+
+  color: black;
+
+
+  a {
+    color: $bg;
+
+    &:focus {
+      outline: none; //For firefox
+    }
+
+    &:focus, &:hover, &:active {
+      text-decoration: none;
+      color: $orangeDark;
+    }
+  }
+
+
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $globalFontHeading;
+}
+
+
+
+.jumbotron {
+  height: 95vh;
+  margin-bottom: 0;
+  background: url(../images/mic.jpg) no-repeat fixed; 
+  background-position: center bottom;
+  background-size: cover;
+  color: $tint;
+}
+
+#theimprov {
+  background-color: $topWhite;
+  padding-top: 5vh;
+  padding-bottom: 20px;
+}
+
+#thetoast {
+  background-color: $bg;
+}
+
+footer {
+  background-color: $shade;
+}
+
+section+section {
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+
+
+
+#joinus {
+  background-color: $box2;
+}
+
+p {
+  padding-bottom: 2vh;
+}
+
+
+/*------------------------------------*\
+    $General Content
+\*------------------------------------*/
+
+
+
+#brand {
+  // height: 95vh;
+  width: 100%;
+}
+
+.oval {
+  // width: 200px;
+  // height: 400px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+figurecaption {
+  // display: block;
+  // text-align: center;
+
+  span {
+    display: block;
+  }
+}
+
+.rightpics {
+  margin-left: 2%;
+  width: 50%;
+  padding-top: 20px;
+}
+
+.tinapic {
+  width: 15%;
+  margin-right: 2%;
+}
+
+.toastrightpics {
+  margin-left: 2%;
+  padding-top: 20px;  
+  width: 40%;
+}
+
+.toastleftpics {
+  @extend .toastrightpics;
+  margin-right: 2%;
+  margin-left: 0;
+}
+
+
+
+#joinus iframe {
+  width: 100%;
+}
+
+.group:before, .group:after { content: ""; display: table; }
+.group:after { clear: both; }
+.group { zoom: 1; /* IE6&7 */ }
+
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+footer {
+  padding: 4% 0;
+  color: $bg;
+}
+
+
+.navholder {
+  display: inline-block;
+
+  &+& {
+    margin-left: 5%;
+  }
+}
+
+.navicon {
+  border: 2px solid $bg;
+  color: $bg;
+  box-sizing: border-box;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+
+  &:hover, &:focus, &:active {
+    border: 5px solid $orangeDark;
+    color: $bg;
+
+    i {
+      color: $orangeDark;
+    }
+  }
+
+
+
+}
+
+.navicon span {
+  display: block;
+  font-family: $globalFontHeading;
+  font-size: 13px;
+
+}
+
+$grayOut: #CCC;
+
+hr {
+    display: block; 
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid $grayOut;
+    margin: 5% 0;
+}
+
+.resources {
+  font-size: 13px;
+
+  span {
+    color: $grayOut;
+    display: block;
+    border-bottom: 1px solid $grayOut;
+    margin-bottom: 3px;
+  }
+
+  ul {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+  }
+
+  li a {
+    display: inline-block;
+    border-bottom: 2px dotted transparent;
+
+     &:hover, &:focus, &:active {
+      border-bottom: 2px dotted $orangeDark;
+      color: $bg;
+    }   
+  }
+}
+
+
+
+// .leftResource {
+//   text-align: left;
+// }
+
+// .rightResource {
+//   text-align: left;
+// }
+
+// footer {
+//   text-align: center;
+//   background-color: $shade;
+//   color: $bg;
+
+//   div {
+//     width: 33%;
+//     margin: 0 auto;
+//     position: relative;
+//     padding-top: 2%;
+//   }
+
+//   img {
+//     height: 100px;
+//     width: 100px;
+//     border-radius: 50%;
+//     position: relative;
+//     margin-bottom: 3%;
+
+//   }
+
+//   p {
+//     position: relative; //to be in-front of image
+//   }
+
+//   ul {
+//     list-style:  none;
+//     margin: 0;
+//     padding: 0 0 1% 0;
+//     font-size: 16px;
+//   }
+
+//   li {
+//     display: inline-block;
+//     margin: 25px 0 18px;
+//   }
+
+//   li+li{
+//     margin-left: 30px;
+//   }
+
+//   a {
+//     color: $bg;
+//     display: inline-block;
+//     border: 2px solid transparent;
+//     border-radius: 4px;
+//     padding: 10px 10px;
+//     width: 109px;
+
+//     &:hover, &:focus, &:active {
+//       color: $bg;
+//       text-decoration: none;
+//     }
+
+//     &:hover {
+//       border: 2px solid $bg;
+//     }
+//   }
+
+//   span {
+//     display: block;
+//     text-transform: uppercase;
+//   }
+// }
+
+
+
+/*------------------------------------*\
+    $MEDIA QUERY
+\*------------------------------------*/
+@media screen and (max-width: 992px) {
+  .toastrightpics {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .rightpics {
+    margin-bottom: 20px;
+    width: 100%;
+    margin-left: 0;
+    padding: 0 5%;
+    float: none;
+  }
+}
+
+
+
+@media screen and (max-width: 545px) {
+  .toastrightpics {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 5%;
+    margin-left: 0;
+  }
+
+  .tinapic {
+    width: 90px;
+  }
+
+  .toastleftpics {
+    margin-right: 0;
+  }
+}
+
+
+@media screen and (max-width: 360px) {
+
+
+  footer li + li {
+    margin-left: 13px;
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+}
+
+

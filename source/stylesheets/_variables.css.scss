@@ -1,0 +1,53 @@
+$globalFontHeading: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
+$globalFont:'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$bodyCopy: 16px;
+
+
+$bg: #e5e8f1;
+$orangeTint: #e9e9de;
+
+
+$kicker: #e4e3e8;
+$tint: #b1b0b8;
+$tone: #80828f;
+$shade: #313036;
+
+$highlight: #D91623;
+//CC2224
+//D91623
+
+// $aj-red: #cb1e1e;
+// $angularRedLogo: hsla(1, 62, 45, 1); //#b94a48;
+// $angularRed: #b94a48;
+// $angularRedLighter: hsla(1, 82, 65, 1); 
+// $textAlpha: rgba(0, 0, 0, 0.298039);
+
+$blueDark: rgb(6, 52, 116);
+$blueMed: rgb(56, 139, 192);
+$blueLight: rgb(78, 188, 217);
+$orangeLight: #E4E3D5;
+$orangeMed: rgb(244, 232, 169);
+$orangeDark: rgb(241, 183, 66);
+
+$codeSchoolLight: #EFEDDF;
+$codeSchoolMed: #E4E3D5;
+
+$topWhite: #FFF;
+$beige: #FEFCDE;
+$box2: #aacdd7;
+
+
+$plane: #f5f5f5;
+$spanTag: hsla(1, 0%, 65%, 1);
+
+
+@font-face {
+  font-family: 'top_secretbold';
+  src: url('./Top-Secret-fontfacekit/Top_Secret-webfont.eot');
+  src: url('./Top-Secret-fontfacekit/Top_Secret-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./Top-Secret-fontfacekit/Top_Secret-webfont.woff') format('woff'),
+       url('./Top-Secret-fontfacekit/Top_Secret-webfont.ttf') format('truetype'),
+       url('./Top-Secret-fontfacekit/Top_Secret-webfont.svg#top_secretbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="559.00006"
+   height="118.00407">
+   <style>
+    #border {
+      fill:none;
+      stroke:black;
+      stroke-width:6;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      stroke-miterlimit:4"
+    }
+  </style>
+  <path
+     id="border"
+     d="m 3.0000429,3.0040714 552.9999971,0 0,111.9999986 -552.9999971,0 z" />
+</svg>

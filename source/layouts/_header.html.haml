@@ -1,0 +1,28 @@
+%header.navbar.navbar-static-top#top{role:'banner'}
+  %nav.navbar.navbar-default{role:'navigation'}
+    .container
+      .row
+        / Brand and toggle get grouped for better mobile display
+        .navbar-header
+          %button.navbar-toggle{type:'button', data:{target:'#navbarCollapse', toggle:'collapse'}}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand.scroll{href:'./'}
+            %span IMPROV MASTERS
+            / %span.glyphicon.glyphicon-home
+            / %object#logo{type:"image/svg+xml", data:"./images/improvmasters.svg"}
+
+        / Collection of nav links and other content for toggling
+        .collapse.navbar-collapse#navbarCollapse
+          / %ul.nav.navbar-nav
+          /   %li
+          /     %a.scroll{href:'#theimprov'} The Improv
+          /   %li
+          /     %a.scroll{href:'#thetoast'} The Toast
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a{href:'./index.html#joinus', alt:'Join Us!'} JOIN US!
+            %li
+              %a{href:'#', alt:'Members Area'} MEMBERS PAGE

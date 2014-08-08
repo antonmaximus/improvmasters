@@ -3,36 +3,16 @@ title: Improv Masters
 body_class: index
 ---
 
-/ %header.navbar.navbar-static-top#top{role:'banner'}
-/   %nav.navbar.navbar-default{role:'navigation'}
-/     .container
-/       / Brand and toggle get grouped for better mobile display
-/       .navbar-header
-/         %button.navbar-toggle{type:'button', data:{target:'#navbarCollapse', toggle:'collapse'}}
-/           %span.sr-only Toggle navigation
-/           %span.icon-bar
-/           %span.icon-bar
-/           %span.icon-bar
-/         %a.navbar-brand.scroll{href:'#top'}
-/           %object#logo{type:"image/svg+xml", data:"./images/improvmasters.svg"}
-/       / Collection of nav links and other content for toggling
-/       .collapse.navbar-collapse#navbarCollapse
-/         %ul.nav.navbar-nav
-/           %li
-/             %a.scroll{href:'#theimprov'} The Improv
-/           %li
-/             %a.scroll{href:'#thetoast'} The Toast
-/           %li
-/             %a.scroll{href:'#joinus'} Join Us!
-/           %li
-/             %a.scroll{href:'#about'} About
 
-.jumbotron
+
+%div
   .container
-    %h1 Improv Masters
-    %p ...where Improv and Toastmasters meet.
-    / %p
-    /   %a.btn.btn-primary.btn-lg{role:'button'} Learn More  »
+    .row
+      .jumbotron
+        %h1 Improv Masters
+        %p ...where Improv and Toastmasters meet.
+        / %p
+        /   %a.btn.btn-primary.btn-lg{role:'button'} Learn More  »
 
 %section#theimprov
   .container
@@ -150,7 +130,7 @@ body_class: index
           %li 
             %a{ href:'http://en.wikibooks.org/wiki/Improvisational_Acting/Rules', alt:''} Wikibooks on Improv
       .col-xs-8.col-xs-offset-2.col-sm-3.col-sm-offset-0
-        %span Toastmasters Resources
+        %span About Toastmasters
         %ul
           %li 
             %a{ href:'#', alt:''} Toastmasters International

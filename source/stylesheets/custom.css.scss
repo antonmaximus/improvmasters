@@ -22,9 +22,9 @@ CAROUSEL
 body {
   font-family: $globalFont;
   font-size: $bodyCopy;
-  background-color: white;
+  background: $paperGreyTexture;
 
-  color: black;
+  color: $shade;
 
 
   a {
@@ -40,8 +40,28 @@ body {
     }
   }
 
-
 }
+
+.navbar {
+  min-height: 10px;
+}
+.navbar-default {
+  background: $paperGreyTexture;
+  font-family: $globalFont;
+  font-size: $bodyCopy;
+
+ .navbar-brand,
+ .navbar-nav > li > a {
+    color: $shade;
+    padding: 5px 15px;
+  }
+
+  .navbar-brand {
+    height: auto;
+    font-size: $bodyCopy;
+  }
+}
+
 
 h1, h2, h3, h4, h5 {
   font-family: $globalFontHeading;
@@ -51,15 +71,18 @@ h1, h2, h3, h4, h5 {
 
 .jumbotron {
   height: 95vh;
-  margin-bottom: 0;
-  background: url(../images/mic.jpg) no-repeat fixed; 
+  // width: 95vw;
+  // margin: 13px;
+   margin: 15px 0;
+  // margin-bottom: 0;
+  background: url(../images/mic720ht.jpg) no-repeat fixed; 
   background-position: center bottom;
   background-size: cover;
-  color: $tint;
+  color: $paperGreyTextureColor;
 }
 
 #theimprov {
-  background-color: $topWhite;
+  background-color: $paperGreyTexture;
   padding-top: 5vh;
   // padding-bottom: 20px;
 }
@@ -97,21 +120,6 @@ section+section {
   width: 100%;
 }
 
-.oval {
-  // width: 200px;
-  // height: 400px;
-  background-color: red;
-  border-radius: 50%;
-}
-
-figurecaption {
-  // display: block;
-  // text-align: center;
-
-  span {
-    display: block;
-  }
-}
 
 .rightpics {
   margin-left: 2%;
@@ -149,6 +157,78 @@ figurecaption {
 .group:after { clear: both; }
 .group { zoom: 1; /* IE6&7 */ }
 
+
+
+/*------------------------------------*\
+    $ABOUT
+\*------------------------------------*/
+.about img {
+  width: 100%;
+}
+
+#leadership {
+  .oval {
+    height: 300px;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 2px 4px 10px #888;
+    margin-top: 10px;
+  }
+  figurecaption {
+    span {
+      display: block;
+    }
+    span:first-child {
+      margin-top: 10px;
+    }
+  }
+}
+
+.officers {
+  margin: 3% auto 4%;
+
+  .row+.row {
+    margin-top: 4%;
+  }
+
+  img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 3px 4px 10px #888;
+  }
+
+  figurecaption {
+    display: table-cell;
+    height: 100px;
+    vertical-align: middle;
+    float: none;
+    span {
+      display: block;
+    }
+
+    span:first-child {
+      // margin-top: 10%;
+    }
+  }
+}
+
+
+
+
+
+
+
+// figurecaption {
+//   // display: block;
+//   // text-align: center;
+
+//   span {
+//     display: block;
+//   }
+// }
 
 /*------------------------------------*\
     $FOOTER

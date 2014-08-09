@@ -21,35 +21,16 @@
     <link href="stylesheets/custom.css" rel="stylesheet" type="text/css" />
   </head>
   <body class='index'>
-    <!-- %header.navbar.navbar-static-top#top{role:'banner'} -->
-    <!-- %nav.navbar.navbar-default{role:'navigation'} -->
-    <!-- .container -->
-    <!-- / Brand and toggle get grouped for better mobile display -->
-    <!-- .navbar-header -->
-    <!-- %button.navbar-toggle{type:'button', data:{target:'#navbarCollapse', toggle:'collapse'}} -->
-    <!-- %span.sr-only Toggle navigation -->
-    <!-- %span.icon-bar -->
-    <!-- %span.icon-bar -->
-    <!-- %span.icon-bar -->
-    <!-- %a.navbar-brand.scroll{href:'#top'} -->
-    <!-- %object#logo{type:"image/svg+xml", data:"./images/improvmasters.svg"} -->
-    <!-- / Collection of nav links and other content for toggling -->
-    <!-- .collapse.navbar-collapse#navbarCollapse -->
-    <!-- %ul.nav.navbar-nav -->
-    <!-- %li -->
-    <!-- %a.scroll{href:'#theimprov'} The Improv -->
-    <!-- %li -->
-    <!-- %a.scroll{href:'#thetoast'} The Toast -->
-    <!-- %li -->
-    <!-- %a.scroll{href:'#joinus'} Join Us! -->
-    <!-- %li -->
-    <!-- %a.scroll{href:'#about'} About -->
-    <div class='jumbotron'>
+    <div>
       <div class='container'>
-        <h1>Improv Masters</h1>
-        <p>...where Improv and Toastmasters meet.</p>
-        <!-- %p -->
-        <!-- %a.btn.btn-primary.btn-lg{role:'button'} Learn More  » -->
+        <div class='row'>
+          <div class='jumbotron'>
+            <h1>Improv Masters</h1>
+            <p>...where Improv and Toastmasters meet.</p>
+            <!-- %p -->
+            <!-- %a.btn.btn-primary.btn-lg{role:'button'} Learn More  » -->
+          </div>
+        </div>
       </div>
     </div>
     <section id='theimprov'>
@@ -195,7 +176,7 @@
             </ul>
           </div>
           <div class='col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0'>
-            <span>Toastmasters Resources</span>
+            <span>About Toastmasters</span>
             <ul>
               <li>
                 <a alt='' href='#'>Toastmasters International</a>
@@ -221,12 +202,11 @@
         if(typeof($.fn.modal) === 'undefined') {document.write('<script src="./fallback/3.1.1/js/bootstrap.min.js"><\/script>')}
     </script>
     <!-- BOOTSTRAP CSS Fallback -->
-    <script>
-        $(document).ready(function() {
-        var itemToCheck = $('.carousel').css('position');
-        if(itemToCheck != 'relative') {
-        $("head").prepend('<link rel="stylesheet" href="./fallback/3.1.1/css/bootstrap.min.css">');}});
-    </script>
+    <!-- :javascript -->
+    <!-- $(document).ready(function() { -->
+    <!-- var itemToCheck = $('.carousel').css('position'); -->
+    <!-- if(itemToCheck != 'relative') { -->
+    <!-- $("head").prepend('<link rel="stylesheet" href="./fallback/3.1.1/css/bootstrap.min.css">');}}); -->
     <!-- FONTAWESOME CSS CDN -->
     <link href='//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css' rel='stylesheet'>
     <!-- FONTAWESOME CSS Fallback -->

@@ -17,7 +17,7 @@ CAROUSEL
 
 
 /*------------------------------------*\
-    $MAIN
+    $GENERIC
 \*------------------------------------*/
 body {
   font-family: $globalFont;
@@ -42,34 +42,33 @@ body {
 
 }
 
-.navbar {
-  min-height: 10px;
-}
-.navbar-default {
-  background: $paperGreyTexture;
-  font-family: $globalFont;
-  font-size: $bodyCopy;
+@import "headerFooter";
 
- .navbar-brand,
- .navbar-nav > li > a {
-    color: $shade;
-    padding: 5px 15px;
-  }
-
-  .navbar-brand {
-    height: auto;
-    font-size: $bodyCopy;
-  }
-}
 
 
 h1, h2, h3, h4, h5 {
   font-family: $globalFontHeading;
 }
 
+.btn-primary {
+  background-color: $orangeDark;
+  border-color: $orangeDark;
 
+  &:hover {
+    background-color: $orangeYellow;
+    border-color: $orangeYellow;
+  }
+}
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
 
 .jumbotron {
+  svg {
+    fill: $paperGreyTextureColor;
+    width: 50%;
+  }
   height: 95vh;
   // width: 95vw;
   // margin: 13px;
@@ -162,14 +161,14 @@ section+section {
 /*------------------------------------*\
     $ABOUT
 \*------------------------------------*/
-.about img {
+#aboutus img {
   width: 100%;
 }
 
 #leadership {
   .oval {
     height: 300px;
-    width: 100%;
+    width: 200px;
     border-radius: 50%;
     border: 3px solid white;
     box-shadow: 2px 4px 10px #888;
@@ -188,8 +187,8 @@ section+section {
 .officers {
   margin: 3% auto 4%;
 
-  .row+.row {
-    margin-top: 4%;
+  figure {
+    margin-bottom: 3%;
   }
 
   img {
@@ -214,184 +213,6 @@ section+section {
     }
   }
 }
-
-
-
-
-
-
-
-// figurecaption {
-//   // display: block;
-//   // text-align: center;
-
-//   span {
-//     display: block;
-//   }
-// }
-
-/*------------------------------------*\
-    $FOOTER
-\*------------------------------------*/
-footer {
-  padding: 4% 0;
-  color: $bg;
-}
-
-
-.navholder {
-  display: inline-block;
-
-  &+& {
-    margin-left: 5%;
-  }
-}
-
-.navicon {
-  border: 2px solid $bg;
-  color: $bg;
-  box-sizing: border-box;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-
-  &:hover, &:focus, &:active {
-    border: 5px solid $orangeDark;
-    color: $bg;
-
-    i {
-      color: $orangeDark;
-    }
-  }
-
-
-
-}
-
-.navicon span {
-  display: block;
-  font-family: $globalFontHeading;
-  font-size: 13px;
-
-}
-
-$grayOut: #CCC;
-
-hr {
-    display: block; 
-    height: 1px;
-    border: 0; 
-    border-top: 1px solid $grayOut;
-    margin: 5% 0;
-}
-
-.resources {
-  font-size: 13px;
-
-  span {
-    color: $grayOut;
-    display: block;
-    border-bottom: 1px solid $grayOut;
-    margin-bottom: 3px;
-  }
-
-  ul {
-    text-decoration: none;
-    list-style: none;
-    padding: 0;
-  }
-
-  li a {
-    display: inline-block;
-    border-bottom: 2px dotted transparent;
-
-     &:hover, &:focus, &:active {
-      border-bottom: 2px dotted $orangeDark;
-      color: $bg;
-    }   
-  }
-}
-
-
-
-// .leftResource {
-//   text-align: left;
-// }
-
-// .rightResource {
-//   text-align: left;
-// }
-
-// footer {
-//   text-align: center;
-//   background-color: $shade;
-//   color: $bg;
-
-//   div {
-//     width: 33%;
-//     margin: 0 auto;
-//     position: relative;
-//     padding-top: 2%;
-//   }
-
-//   img {
-//     height: 100px;
-//     width: 100px;
-//     border-radius: 50%;
-//     position: relative;
-//     margin-bottom: 3%;
-
-//   }
-
-//   p {
-//     position: relative; //to be in-front of image
-//   }
-
-//   ul {
-//     list-style:  none;
-//     margin: 0;
-//     padding: 0 0 1% 0;
-//     font-size: 16px;
-//   }
-
-//   li {
-//     display: inline-block;
-//     margin: 25px 0 18px;
-//   }
-
-//   li+li{
-//     margin-left: 30px;
-//   }
-
-//   a {
-//     color: $bg;
-//     display: inline-block;
-//     border: 2px solid transparent;
-//     border-radius: 4px;
-//     padding: 10px 10px;
-//     width: 109px;
-
-//     &:hover, &:focus, &:active {
-//       color: $bg;
-//       text-decoration: none;
-//     }
-
-//     &:hover {
-//       border: 2px solid $bg;
-//     }
-//   }
-
-//   span {
-//     display: block;
-//     text-transform: uppercase;
-//   }
-// }
-
-
-
 
 
 .onpaper {
@@ -431,79 +252,11 @@ hr {
 
 
 
-
-
-
-
 /*------------------------------------*\
     $MEDIA QUERY
 \*------------------------------------*/
+@import "mediaquery";
 
 
 
-@media screen and (max-width: 1080px) {
-  .onpaper {
-    width: 85%;
-  }
 
-}
-
-@media screen and (max-width: 992px) {
-  .toastrightpics {
-    padding-top: 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .rightpics {
-    margin-bottom: 20px;
-    width: 100%;
-    margin-left: 0;
-    padding: 0 5%;
-    float: none;
-  }
-}
-
-
-
-@media screen and (max-width: 545px) {
-  .toastrightpics {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 0 5%;
-    margin-left: 0;
-  }
-
-  .tinapic {
-    width: 90px;
-  }
-
-  .toastleftpics {
-    margin-right: 0;
-  }
-}
-
-
-@media screen and (max-width: 375px) {
-
-
-
-.navholder {
-
-  &+& {
-    margin-left: 1%;
-  }
-}
-
-
-
-  .navicon {
-    height: 85px;
-    width: 85px;
-
-    i {
-      font-size: 30px;
-    }
-  }
-
-}

@@ -1,0 +1,90 @@
+
+
+/*------------------------------------*\
+    $MEDIA QUERY
+\*------------------------------------*/
+
+
+
+@media screen and (max-width: 1080px) {
+  .onpaper {
+    width: 85%;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  .toastrightpics {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .rightpics {
+    margin-bottom: 20px;
+    width: 100%;
+    margin-left: 0;
+    padding: 0 5%;
+    float: none;
+  }
+
+  .jumbotron {
+    svg {
+      width: 80%;
+    }
+  }
+
+}
+
+
+
+@media screen and (max-width: 545px) {
+  .toastrightpics {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 5%;
+    margin-left: 0;
+  }
+
+  .tinapic {
+    width: 90px;
+  }
+
+  .toastleftpics {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .jumbotron {
+    a svg {
+      width: 95%;
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 375px) {
+  .navholder {
+    &+& {
+      margin-left: 1%;
+    }
+  }
+
+  .navicon {
+    height: 85px;
+    width: 85px;
+
+    i {
+      font-size: 30px;
+    }
+  }
+
+  .jumbotron {
+    a svg {
+      width: 100%;
+    }
+  }
+
+}

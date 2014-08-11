@@ -1,0 +1,146 @@
+
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+header {
+  $linkColor: $shade;
+  $hoverColor: #E36C22;
+  background-color: $csBlueLight;
+
+  .nav > li > a, a {
+    color: $linkColor;
+    &:hover {
+      background-color: transparent;
+      color: $hoverColor;
+    }
+  }
+
+  /* mobile version */
+  button.navbar-toggle {
+    .icon-bar  { background-color: $linkColor;}
+    &:hover .icon-bar { background-color: $hoverColor;}
+  }
+
+
+  .nav > li > a:hover, 
+  .nav > li > a:focus {
+    background-color: transparent;
+  }
+
+  svg {
+    width: 225px;
+    fill: $linkColor;
+
+    &:hover {
+      fill: $hoverColor;
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  #leadership figure {
+    margin-bottom: 4%;
+  }
+
+  header {
+    .nav > li > a, a {
+      &:hover {
+        background-color: #EEE;
+      }
+    }
+  }
+
+}
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+footer {
+  padding: 4% 0;
+  // margin-top: 3%;
+  color: $bg;
+  background-color: $shade;
+}
+
+
+.navholder {
+  display: inline-block;
+
+  &+& {
+    margin-left: 5%;
+  }
+}
+
+.navicon {
+  border: 2px solid $bg;
+  color: $bg;
+  box-sizing: border-box;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+
+  &:hover, &:focus, &:active {
+    border: 5px solid $orangeDark;
+    color: $bg;
+
+    i {
+      color: $orangeDark;
+    }
+  }
+
+
+
+}
+
+.navicon span {
+  display: block;
+  font-family: $globalFontHeading;
+  font-size: 13px;
+
+}
+
+$grayOut: #CCC;
+
+hr {
+    display: block; 
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid $grayOut;
+    margin: 5% 0;
+}
+
+.resources {
+  font-size: 13px;
+
+  span {
+    color: $grayOut;
+    display: block;
+    border-bottom: 1px solid $grayOut;
+    margin-bottom: 3px;
+  }
+
+  ul {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+  }
+
+  li a {
+    display: inline-block;
+    border-bottom: 2px dotted transparent;
+
+     &:hover, &:focus, &:active {
+      border-bottom: 2px dotted $orangeDark;
+      color: $bg;
+    }   
+  }
+}
+

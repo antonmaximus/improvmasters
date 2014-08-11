@@ -60,54 +60,81 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+.group:before, .group:after { content: ""; display: table; }
+.group:after { clear: both; }
+.group { zoom: 1; /* IE6&7 */ }
+
+
 /*------------------------------------*\
     $MAIN
 \*------------------------------------*/
 
-.jumbotron {
-  svg {
-    fill: $paperGreyTextureColor;
-    width: 50%;
-  }
+.homeheader {
+
   height: 95vh;
   // width: 95vw;
   // margin: 13px;
-   margin: 15px 0;
   // margin-bottom: 0;
-  background: url(../images/mic720ht.jpg) no-repeat fixed; 
+  background: url(../images/mic1280x720.jpg) no-repeat fixed; 
   background-position: center bottom;
   background-size: cover;
   color: $paperGreyTextureColor;
+
+  .jumbotron {
+    background-color: transparent;
+    padding-top: 1%;
+  }
+
+
+  /* NAVIGATION */
+  $linkColor: $paperGreyTextureColor;
+  $hoverColor: $orangeDark;
+
+  /* mobile version */
+  button.navbar-toggle {
+    .icon-bar  { background-color: $linkColor;}
+    &:hover .icon-bar { background-color: $hoverColor;}
+  }
+
+  a svg {
+    width: 55%;
+    fill: $linkColor;
+  }
+  a:hover svg {
+    fill: $hoverColor;
+  }
+  
+  .nav > li > a:hover, 
+  .nav > li > a:focus {
+    background-color: transparent;
+  }
 }
+
+section {
+  padding-bottom: 25px;
+
+  &.addtop{
+    padding-top: 15px;
+  }
+}
+
+
 
 #theimprov {
   background-color: $paperGreyTexture;
   padding-top: 5vh;
-  // padding-bottom: 20px;
 }
 
-#thetoast {
-  background-color: $bg;
+.blue2 {
+  background-color: $blue2;
 }
 
-footer {
-  background-color: $shade;
-}
-
-section+section {
-  padding-top: 15px;
-  padding-bottom: 20px;
-}
-
-
-
-
-#joinus {
-  background-color: $box2;
+.blue3 {
+  background-color: $blue3;
 }
 
 /*------------------------------------*\
-    $General Content
+    $HOME PAGE
 \*------------------------------------*/
 
 .howtoimprov p {
@@ -145,24 +172,35 @@ section+section {
 
 
 
+#joinus {
+  iframe {
+    width: 100%;
+  } 
 
+  .beamember {
+    margin-top: 30px;
+  }
 
-
-#joinus iframe {
-  width: 100%;
+  a {
+    display: inline-block;
+    color: $shade;
+    border-bottom: 2px dotted $orangeDark;
+    &:hover {
+      border-bottom: 3px solid     $orangeDark;
+      // color: $orangeDark;
+      // color: #9b6424;
+    }
+  }
 }
-
-.group:before, .group:after { content: ""; display: table; }
-.group:after { clear: both; }
-.group { zoom: 1; /* IE6&7 */ }
-
 
 
 /*------------------------------------*\
     $ABOUT
 \*------------------------------------*/
-#aboutus img {
-  width: 100%;
+#aboutus {
+  img {
+    width: 100%;
+  }
 }
 
 #leadership {
@@ -185,7 +223,6 @@ section+section {
 }
 
 .officers {
-  margin: 3% auto 4%;
 
   figure {
     margin-bottom: 3%;
@@ -251,6 +288,32 @@ section+section {
 }
 
 
+/*------------------------------------*\
+    $NEW MEMBERS
+\*------------------------------------*/
+.faq {
+  list-style-type: none;
+  padding-left: 20px;
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  span {
+    display: block;
+  }
+
+  .question {
+    font-weight: bold;
+  }
+}
+
+/*------------------------------------*\
+    $CONTACT
+\*------------------------------------*/
+.form-control {
+  background-color: $csBlueLight;
+}
 
 /*------------------------------------*\
     $MEDIA QUERY

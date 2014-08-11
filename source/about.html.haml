@@ -5,19 +5,19 @@ body_class: index
 
 = partial('./layouts/header')
 
-#aboutus
+%section#aboutus
   .container
     .row
       .col-xs-12
         %h1 About Our Club
         .row
           .col-sm-6.col-md-6
-            %p The Nooners Toastmasters club was established in 2006 and is open to people from all walks of life. Most of our members hail from the business park in Rancho Cordova but some members travel from other locations in the region. Our meetings are semi-formal but we also try to keep them fun too. We always look forward to new smiling faces, so please feel free to join us and see what we’re all about.
+            %p The ImprovMasters Toastmasters club was established in 2006 and chartered in June 2012 as Club No. 2563285.  Most of our members hail from the west part of Los Angeles, but some members travel from other locations in the region. Our meetings are fun but structured. We always look forward to new smiling faces, so please feel free to join us and see what we’re all about.
 
-            %p We meet every 2nd and 4th Wednesday from 12:05 to 12:55 at Rancho Cordova City Hall in the Community Board Room (opposite the reception area in the main lobby).
+            %p We meet every Friday from 8PM to 10PM at Share Building in the Serenity Conference Room (2nd Floor).  The address is 6666 Green Valley Circle, Culver City CA 90230.
           .col-sm-6.col-md-6
             %img{src:'./images/shareBuilding.jpg', alt:'Share Building in Culver City'}
-#leadership
+%section#leadership
   .container
     .row.group
       .col-xs-12
@@ -41,7 +41,7 @@ body_class: index
 
     / / Add the extra clearfix for only the required viewport
     / .clearfix.visible-md
-.officers
+%section.officers
   .container
     .row
       %figure.col-xs-12.col-sm-6.col-md-4

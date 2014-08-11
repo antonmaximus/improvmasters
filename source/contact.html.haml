@@ -1,0 +1,39 @@
+---
+title: Improv Masters
+body_class: index
+---
+
+= partial('./layouts/header')
+
+%section
+  .container
+    .row
+      .col-xs-12.col-sm-12
+        %h1 Contact Us!
+        %p Submit the form below. You can also email us at improvmasters@gmail.com.
+        .row
+          .col-sm-12.col-md-6
+            %form{method:'POST', action:'http://forms.brace.io/aj9009@gmail.com'}
+              .form-group
+                %label{for:'exampleInputName'} Name
+                %input.form-control#exampleInputName{name:'name', type:'name', placeholder:'Enter name', required:'true'}
+              .form-group
+                %label{for:'exampleInputEmail1'} Email address
+                %input.form-control#exampleInputEmail1{name:'_replyto', type:'email', placeholder:'Enter email', required:'true'}      
+              .form-group
+                %label{for:'exampleTextArea'} Message
+                %textarea.form-control#exampleInputEmail1{name:'message', type:'email', rows:'5', required:'true'}   
+              %button.btn.btn-primary{type:'submit'} Submit
+%section.blue2.addtop
+  .container
+    .row  
+      .col-md-12
+        %h1 Be our guest...
+        %p 
+          We meet at 8PM on Fridays in the Serenity Conference Room (2nd Floor) at 
+          %br
+          6666 Green Valley Circle, Culver City CA 90230.
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.552180517164!2d-118.38531130000004!3d33.978347999999954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b74ef1997cd5%3A0x653fdf1b2e5403f!2s6666+Green+Valley+Cir%2C+Culver+City%2C+CA+90230!5e0!3m2!1sen!2sus!4v1407260222309" width="400" height="300" frameborder="0" style="border:0"></iframe>
+
+
+= partial('./layouts/footer')

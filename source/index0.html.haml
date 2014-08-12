@@ -1,0 +1,110 @@
+---
+title: Improv Masters
+body_class: index
+---
+
+.homeheader
+  .container
+    .navbar-header
+      %button.navbar-toggle{type:'button', data:{toggle:'collapse', target:'.bs-navbar-collapse'}}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+    %nav.collapse.navbar-collapse.bs-navbar-collapse{role:'navigation'}
+      %ul.nav.navbar-nav.navbar-right
+        %li.active
+          %a{href:'#'}Join Us!
+        %li.active
+          %a{href:'#'}Members Area
+
+  .jumbotron
+    .container
+      .row
+        .intro
+          %a{href:'#'}
+            = partial('./layouts/brandsvg')
+          %p ...where Improv and Toastmasters meet.
+          / %p
+          /   %a.btn.btn-primary.btn-lg{role:'button'} Learn More  »
+
+%section#theimprov
+  .container
+    .row
+      .col-md-12
+        %h1 How We Play...
+        %p At ImprovMasters, we add improv games to the prepared speeches one expects to find in a standard Toastmasters club. Part of  our club meeting is Toastmasters' prepared speeches given by members, and the other part is playing improv.  Improv is unique in that if you experience a performance, that’s it… Improv is different every time.
+
+      .col-md-6
+        %h2 Join us!
+        %p We meet at 8PM on Fridays in the Serenity Conference Room (2nd Floor) at 6666 Green Valley Circle, Culver City CA 90230.
+        %p First-time guests are free to attend. Returning guests are asked for up to $5 contribution to help pay for the cost of the room. Those who have joined as members will not have to pay.
+
+        %h2.beamember Want to be a Member?
+        %p 
+          %a{href:'./newmembers', alt:''} Click here to find out how...
+
+      .col-md-6
+        %iframe{frameborder: "0", height: "300", src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.552180517164!2d-118.38531130000004!3d33.978347999999954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b74ef1997cd5%3A0x653fdf1b2e5403f!2s6666+Green+Valley+Cir%2C+Culver+City%2C+CA+90230!5e0!3m2!1sen!2sus!4v1407260222309", style: "border:0", width: "400"}
+
+%section.blue2.addtop#joinus
+  .container
+    .row
+      .col-md-12
+        %h1 What is Improv?
+        %p Improv is a form of theater in which the dialogue, action, story, and characters are made up in the moment it is performed. Improvisational techniques are used extensively in  stage, film, and television. However, the skills and processes of improvisation are used outside of the context of performing arts, as well. It is used in classrooms as an educational tool and in businesses as a way to develop communication skills, creative problem solving, and supportive team-work abilities.
+    .row.howtoimprov
+      .col-md-12
+        %img.pull-right.rightpics{src:'http://cdn.funcheap.com/wp-content/uploads/2014/06/improv.jpg', alt:''}
+        %h2 How to play improv...
+        %div
+          %b 1. Always agree, always allow. 
+          %p Accept what's offered to you, and say YES to get the scene started.
+        %div
+          %b 2. Say "Yes, and..."
+          %p It's your turn to contribute.  You have a responsibility to add to the scene. 
+          %b 3. Make Statements.
+          %p Avoid asking open-ended questions as it puts pressure on your partner.  Instead, turn that question into an 'offer' which will help build the scene.
+        %div
+          %b 4. Don't try to be funny.
+          %p Avoid going for the joke as it usually kills the scene. Instead, just say the first thing that comes to mind. Humor will come naturally out of the scene without any effort.
+        %div
+          %b 5. Make your partner look good &mdash; Listen &amp; Watch
+          %p Focus on listening and watching.  This helps you base your next line off of your partner's line.
+        %div
+          %b 6. There are NO mistakes.
+          %p Everything is an opportunity, so don't be afraid to initiate and commit.
+  .onpaper.effect2
+    %h2 The Basics of Improv (by Tina Fey)
+    %img.pull-left.tinapic{src:'http://guineveregetssober.com/wp-content/uploads/2011/11/tina-fey-liz-lemon.png', alt:''}
+    %p The first rule of improvisation is <strong>AGREE.</strong> Always agree, and <strong>SAY YES.</strong> When you’re improvising, this means you are required to agree with whatever your partner has created. So if we’re improvising and I say, “Freeze, I have a gun,” and you say, “That’s not a gun. It’s your finger. You’re pointing your finger at me,” our improvised scene has ground to a halt. But if I say, “Freeze, I have a gun!” and you say, “The gun I gave you for Christmas! You bastard!” then we have started a scene because we have AGREED that my finger is in fact a Christmas gun.
+
+    %p Now, obviously in real life you’re not always going to agree with everything everyone says. But the Rule of Agreement reminds you to “respect what your partner has created” and to at least start from an open-minded place. Start with a YES and see where that takes you.
+
+    %p The second rule of improvisation is not only to say yes, but <strong>YES, AND.</strong> You are supposed to agree and then add something of your own. If I start a scene with “I can’t believe it’s so hot in here,” and you just say, “Yeah…” we’re kind of at a standstill. But if I say, “I can’t believe it’s so hot in here,” and you say, “What did you expect? We’re in hell,” now we’re getting somewhere. It’s your responsibility to contribute. Your initiations are worthwhile.
+
+    %p The next rule is <strong>MAKE STATEMENTS.</strong> This is a positive way of saying “Don’t ask questions all the time.” If we’re in a scene and I say, “Who are you? Where are we? What are we doing here? What’s in that box?” I’m putting pressure on you to come up with all the answers.
+
+    %p Instead of saying “Where are we?” make a statement like “Here we are in Spain, Dracula.” Okay, “Here we are in Spain, Dracula” may seem like a terrible start to a scene, but this leads us to the best rule: <strong>THERE ARE NO MISTAKES,</strong> only opportunities. 
+
+%section.blue3.addtop#thetoast
+  .container
+    .row
+      .col-md-12  
+        %img.pull-right.toastrightpics{src:'./images/toastmasterspodium2.jpg', alt:''}
+        %h1 What is Toastmasters?
+        %p Toastmasters is a place where you develop and grow - both personally and professionally. You join a community of learners, and in Toastmasters meetings we learn by doing. Whether you're an executive or a stay-at-home parent, a college student or a retiree, you will improve yourself; building skills to express yourself in a variety of situations. You'll open up a world of new possibilities: giving better work presentations; leading meetings - and participating in them - more confidently; speaking more smoothly off the cuff; even handling one-on-one interactions with family, friends and colleagues more positively.
+
+    .row
+      .col-md-12  
+        %img.pull-left.toastleftpics{src:'./images/toastmastersshake.jpg', alt:''}
+        %h2 How does it work?
+        %p In a club meeting, you practice giving prepared speeches and brief impromptu presentations, known as Table Topics. There is no rush and no pressure: The Toastmasters program allows you to progress at your own pace.  
+        %p Constructive evaluation is central to the Toastmasters philosophy. Each time you give a prepared speech, an evaluator will point out strengths as well as suggest improvements. Receiving - and giving - such feedback is a great learning experience. In Toastmasters, encouragement and improvement go hand-in-hand.
+
+
+
+
+
+= partial('./layouts/footer')
+

@@ -3,31 +3,46 @@ title: Improv Masters
 body_class: index
 ---
 
-/ # = partial('./layouts/header')
+= partial('./layouts/header')
 
-%section#aboutus
+%section.block1
   .container
     .row
-      .col-xs-12
+      .col-md-12  
+        %img.pull-right.unclesampic{src:'./images/unclesam.jpg', alt:''}
         %h1 Become a Member!
-        .row
-          .col-sm-6
-            %p Brisket aliqua in corned beef do, t-bone drumstick ea biltong qui kielbasa quis. Laborum cillum shankle tongue nulla proident meatloaf, corned beef turkey tenderloin jerky. Anim sirloin proident prosciutto jerky tempor ribeye corned beef dolor beef ribs nisi ex. Sausage pork loin incididunt tongue, ullamco dolore est non shankle in tail magna cupidatat bacon. Eu nulla short ribs rump capicola, excepteur pork loin deserunt ut sausage non.
+        %p Joining means you can take on the various roles you see in our meetings: from being a functionary, to giving speeches and even running for office.  It's 72 dollars for six months, and the first time you join a Toastmasters club, it costs an additional 22 dollars for the two books.  The first book is the Competent Communicator, which has ten speech assignments designed to help you improve your speaking skills rapidly.  You also get the Competent Leader manual which has assignments that help you build leadership skills.
+        %p.pdf
+          %a.btn.btn-primary.btn-lg{href:'./newmembers.html', role: "button"} 
+            %i.fa.fa-file-pdf-o 
+            %span Download PDF File
+    / .row
+    /   .col-xs-12
+    /     %h1 Become a Member!
+    /     .row
+    /       .col-md-8
+    /         %p Brisket aliqua in corned beef do, t-bone drumstick ea biltong qui kielbasa quis. Laborum cillum shankle tongue nulla proident meatloaf, corned beef turkey tenderloin jerky. Anim sirloin proident prosciutto jerky tempor ribeye corned beef dolor beef ribs nisi ex. Sausage pork loin incididunt tongue, ullamco dolore est non shankle in tail magna cupidatat bacon. Eu nulla short ribs rump capicola, excepteur pork loin deserunt ut sausage non.
 
-            %p Anim sirloin proident prosciutto jerky tempor ribeye corned beef dolor beef ribs nisi ex. Sausage pork loin incididunt tongue, ullamco dolore est non shankle in tail magna cupidatat bacon. Eu nulla short ribs rump capicola, excepteur pork loin deserunt ut sausage non.
-          .col-sm-6
-            %img{src:'./images/toastmastersoutdoors.jpg', alt:'Become a Member!'}
-        .row
-          .col-md-8
-            %h2 Frequently Asked Questions
-            %ul.faq
-              %li
-                %span.question Bacon ipsum dolor sit amet spare ribs eu nisi in exercitation?
-                %span.answer Sausage adipisicing enim andouille bacon. Doner velit adipisicing aute shoulder beef dolore pastrami in, minim fatback.
-              %li
-                %span.question Bacon ipsum dolor sit amet spare ribs eu nisi in exercitation?
-                %span.answer Sausage adipisicing enim andouille bacon. Doner velit adipisicing aute shoulder beef dolore pastrami in, minim fatback.
-              %li
-                %span.question Bacon ipsum dolor sit amet spare ribs eu nisi in exercitation?
-                %span.answer Sausage adipisicing enim andouille bacon. Doner velit adipisicing aute shoulder beef dolore pastrami in, minim fatback.
+    /         %p Anim sirloin proident prosciutto jerky tempor ribeye corned beef dolor beef ribs nisi ex. Sausage pork loin incididunt tongue, ullamco dolore est non shankle in tail magna cupidatat bacon. Eu nulla short ribs rump capicola, excepteur pork loin deserunt ut sausage non.
+    /       .col-md-4
+    /         %img{src:'./images/unclesam.jpg', alt:'Become a Member!'}
+    .row
+      .col-md-12  
+        %img.pull-left.rosiepic{src:'./images/rosie.jpg', alt:'Become a Member!'}
+        %h2 Frequently Asked Questions
+        %ul.faq
+          %li
+            %span.question Is it ok for me to just sit and watch?
+            %span.answer Yes, it is. We encourage everyone to participate as much as they like.
+          %li
+            %span.question Do I have to do speeches, or can I just play games?
+            %span.answer As a member you can sign up to give speeches, but anyone can play the improv games.  Whether you're here to focus on your speeches or learn improv yadda yadda" we encourage you etc.
+          %li
+            %span.question Do you perform as a group?
+            %span.answer No, some of our members do perform in various ways, but ImprovMasters is a Toastmasters club with improv, not a performance group (or something, this sucks so write it better).
+          %li
+            %span.question What skill level are the members?
+            %span.answer We are a bunch of rank amateurs, we like it that way.  
+
+
 = partial('./layouts/footer')

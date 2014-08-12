@@ -3,9 +3,9 @@ title: Improv Masters
 body_class: index
 ---
 
-/ = partial('./layouts/header')
+= partial('./layouts/header')
 
-%section#aboutus
+%section.block1
   .container
     .row
       .col-xs-12
@@ -17,14 +17,15 @@ body_class: index
             %p We meet every Friday from 8PM to 10PM at Share Building in the Serenity Conference Room (2nd Floor).  The address is 6666 Green Valley Circle, Culver City CA 90230.
           .col-sm-6.col-md-6
             %img{src:'./images/shareBuilding.jpg', alt:'Share Building in Culver City'}
-%section#leadership
+%section.block1#leadership
   .container
     .row.group
       .col-xs-12
         %h1 Current Leadership
         .row
           %figure.col-sm-4.col-md-3.text-center
-            %img.oval{src:'http://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg'}
+            .oval
+              %img{src:'http://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg'}
             %figurecaption
               %span John Doe
               %span President
@@ -33,9 +34,7 @@ body_class: index
 
     / / Add the extra clearfix for only the required viewport
     / .clearfix.visible-md
-%section.officers
-  .container
-    .row
+    .row.officers
       %figure.col-xs-12.col-sm-6.col-md-4
         .row
           .col-xs-6.col-sm-5.text-right

@@ -14,7 +14,6 @@ CAROUSEL
 \*------------------------------------*/
 // @import "reset";
 @import "variables";
-@import "headerFooter";
 
 
 /*------------------------------------*\
@@ -23,12 +22,14 @@ CAROUSEL
 body {
   font-family: $globalFont;
   font-size: $bodyCopy;
-  background: white;
+  background: $paperGreyTexture;
 
   color: $shade;
 
 
   a {
+    color: $bg;
+
     &:focus {
       outline: none; //For firefox
     }
@@ -41,22 +42,21 @@ body {
 
 }
 
+@import "headerFooter";
+
+
+
 h1, h2, h3, h4, h5 {
   font-family: $globalFontHeading;
 }
 
-.btn.btn-primary {
+.btn-primary {
   background-color: $orangeDark;
   border-color: $orangeDark;
-  border-bottom: 0;
-  color: white;
-  font-size: $bodyCopy;
 
   &:hover {
     background-color: $orangeYellow;
     border-color: $orangeYellow;
-    border-bottom: 0;
-    color: white;
   }
 }
 
@@ -69,101 +69,82 @@ h1, h2, h3, h4, h5 {
     $MAIN
 \*------------------------------------*/
 
-.gmap {
-  height: 250px;
-  width: 100%;
-}
+.homeheader {
 
-.jumbotron {
-  color: $paperGreyTextureColor;
-  // background: url(../images/improvclub.jpg) no-repeat fixed; 
-  background: url(../images/stage.jpg) 50% 62% no-repeat; 
+  height: 95vh;
+  // width: 95vw;
+  // margin: 13px;
+  // margin-bottom: 0;
+  background: url(../images/mic1280x720.jpg) no-repeat fixed; 
+  background-position: center bottom;
   background-size: cover;
-  margin-bottom: 0;
-}
+  color: $paperGreyTextureColor;
 
-.intro svg {
-  width: 55%;
-  fill: $paperGreyTextureColor;
-}
-
-.block1 {
-  background: $paperBeigeTexture;
-  a {
-    border-bottom: 2px dotted $orangeDark;
-    color: $shade;
-    &:hover {
-      border-bottom: 3px solid $orangeDark;
-      color: $shade;
-    }
+  .jumbotron {
+    background-color: transparent;
+    padding-top: 1%;
   }
-}
 
-.block2 {
-  // background-color: #f7f4e8;
-  background: $paperGreyTexture;
-  position: relative;
-  z-index: 2;
-}
 
-.block3 {
-  background-color: $blue2;
+  /* NAVIGATION */
+  $linkColor: $paperGreyTextureColor;
+  $hoverColor: $orangeDark;
+
+  /* mobile version */
+  button.navbar-toggle {
+    .icon-bar  { background-color: $linkColor;}
+    &:hover .icon-bar { background-color: $hoverColor;}
+  }
+
+  a svg {
+    width: 55%;
+    fill: $linkColor;
+  }
+  a:hover svg {
+    fill: $hoverColor;
+  }
+  
+  .nav > li > a:hover, 
+  .nav > li > a:focus {
+    background-color: transparent;
+  }
 }
 
 section {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 
-  img {
-    width: 100%;
+  &.addtop{
+    padding-top: 15px;
   }
 }
 
 
+
+#theimprov {
+  background-color: $paperGreyTexture;
+  padding-top: 5vh;
+}
+
+.blue2 {
+  background-color: $blue2;
+}
+
+.blue3 {
+  background-color: $blue3;
+}
 
 /*------------------------------------*\
     $HOME PAGE
 \*------------------------------------*/
 
-
-.onpaper {
-  margin: 30px auto 30px auto;
-  width:75%;
-  // background: #f7f4e8 url(../images/paper_bkd.jpg);
-  background: $paperBrownTexture;
-  // background: $paperGreyTexture;
-  padding: 3% 6%;
+.howtoimprov p {
+  margin-bottom: 10px;
 }
 
-/*==================================================
- * Effect 2
- * ===============================================*/
-.effect2
-{
-  position: relative;
+#brand {
+  // height: 95vh;
+  width: 100%;
 }
-.effect2:before, .effect2:after
-{
-  z-index: -1;
-  position: absolute;
-  content: "";
-  bottom: 15px;
-  left: 10px;
-  width: 50%;
-  top: 80%;
-  max-width:300px;
-  background: transparent;
-  box-shadow: 0 15px 10px #777;
-  transform: rotate(-3deg);
-}
-.effect2:after
-{
-  transform: rotate(3deg);
-  right: 10px;
-  left: auto;
-}
-
-
 
 
 .rightpics {
@@ -176,10 +157,6 @@ section {
   width: 15%;
   margin-right: 2%;
 }
-
-// .block3 img {
-//   width: 100%;
-// }
 
 .toastrightpics {
   margin-left: 2%;
@@ -195,6 +172,28 @@ section {
 
 
 
+#joinus {
+  iframe {
+    width: 100%;
+  } 
+
+  .beamember {
+    margin-top: 30px;
+  }
+
+  a {
+    display: inline-block;
+    color: $shade;
+    border-bottom: 2px dotted $orangeDark;
+    &:hover {
+      border-bottom: 3px solid     $orangeDark;
+      // color: $orangeDark;
+      // color: #9b6424;
+    }
+  }
+}
+
+
 /*------------------------------------*\
     $ABOUT
 \*------------------------------------*/
@@ -208,22 +207,10 @@ section {
   .oval {
     height: 300px;
     width: 200px;
-    line-height: 300px; //this is impt for vertical align
     border-radius: 50%;
     border: 3px solid white;
     box-shadow: 2px 4px 10px #888;
-    margin: 0 auto 0 auto;
-    overflow: hidden;
-    text-align: center;
-
-
-    img {
-      height: 100%;
-      width: auto;
-      vertical-align: middle;
-      margin: 0 -100%;
-    }
-
+    margin-top: 10px;
   }
   figurecaption {
     span {
@@ -236,7 +223,6 @@ section {
 }
 
 .officers {
-  margin-top: 10px;
 
   figure {
     margin-bottom: 3%;
@@ -266,28 +252,51 @@ section {
 }
 
 
+.onpaper {
+  margin:40px auto;
+  width:75%;
+  background: #f7f4e8 url(../images/paper_bkd.jpg);
+  padding: 3% 6%;
+}
+
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.effect2
+{
+  position: relative;
+}
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  box-shadow: 0 15px 10px #777;
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
 
 /*------------------------------------*\
     $NEW MEMBERS
 \*------------------------------------*/
-.unclesampic {
-  @extend .toastrightpics;
-  width: 30%;
-}
-.rosiepic {
-  @extend .toastleftpics;
-  width: 30%;
-}
-.pdf {
-  margin-top: 30px;
-}
-
 .faq {
   list-style-type: none;
-  padding-left: 0px;
+  padding-left: 20px;
 
   li {
-    margin-bottom: 15px;
+    margin-bottom: 6px;
   }
 
   span {
@@ -296,39 +305,14 @@ section {
 
   .question {
     font-weight: bold;
-    font-style: italic;
   }
 }
-
-/*------------------------------------*\
-    $MEMBERS
-\*------------------------------------*/
-
-td:first-child {
-  vertical-align: text-top;
-}
-tr:first-child td:nth-child(2) {
-  padding-left: 15px;
-}
-td ul {
-  padding-left: 30px;
-}
-
-#accordion a {
-  color: $shade;
-  border-bottom: 2px solid transparent;
-
-  &:hover {
-    border-bottom: 2px dotted $orangeDark;
-  }
-}
-
 
 /*------------------------------------*\
     $CONTACT
 \*------------------------------------*/
 .form-control {
-  background-color: $headerColor;
+  background-color: $csBlueLight;
 }
 
 /*------------------------------------*\

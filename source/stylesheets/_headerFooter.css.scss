@@ -4,10 +4,20 @@
     $HEADER
 \*------------------------------------*/
 
+// Move down content because we have a fixed navbar that is 50px tall
+// body {
+//   padding-top: 50px;
+//   padding-bottom: 20px;
+// }
+
 header {
+  &.navbar {
+    margin-bottom: 0;
+  }
+
   $linkColor: $shade;
   $hoverColor: #E36C22;
-  background-color: $csBlueLight;
+  background-color: $headerColor;
 
   .nav > li > a, a {
     color: $linkColor;
@@ -43,10 +53,6 @@ header {
 
 
 @media screen and (max-width: 768px) {
-  #leadership figure {
-    margin-bottom: 4%;
-  }
-
   header {
     .nav > li > a, a {
       &:hover {
@@ -60,10 +66,12 @@ header {
 /*------------------------------------*\
     $FOOTER
 \*------------------------------------*/
+$footerLink: $paperGreyTextureColor;
+
 footer {
   padding: 4% 0;
   // margin-top: 3%;
-  color: $bg;
+  color: $footerLink;
   background-color: $shade;
 }
 
@@ -77,19 +85,19 @@ footer {
 }
 
 .navicon {
-  border: 2px solid $bg;
-  color: $bg;
+  border: 1px solid $footerLink;
+  color: $footerLink;
   box-sizing: border-box;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  height: 100px;
-  width: 100px;
+  height: 83px;
+  width: 83px;
   border-radius: 50%;
 
   &:hover, &:focus, &:active {
-    border: 5px solid $orangeDark;
-    color: $bg;
+    border: 3px solid $orangeDark;
+    color: $footerLink;
 
     i {
       color: $orangeDark;
@@ -136,10 +144,11 @@ hr {
   li a {
     display: inline-block;
     border-bottom: 2px dotted transparent;
+    color: $footerLink;
 
      &:hover, &:focus, &:active {
       border-bottom: 2px dotted $orangeDark;
-      color: $bg;
+      color: $footerLink;
     }   
   }
 }

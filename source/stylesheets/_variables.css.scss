@@ -39,15 +39,23 @@ $beige: #FEFCDE;
 $box2: #aacdd7;
 
 
-$paperGreyTexture: url('../images/paper_greytexture.jpg') repeat scroll 0% 0% #EBEAE7;
+$paperGreyTexture: #EBEAE7  url('../images/paper_greytexture.jpg') repeat scroll 0% 0% ;
 $paperGreyTextureColor: #EBEAE7;
+
+
+$paperBeigeTexture: #f7f4e8 url(../images/paper_bkd.jpg) repeat scroll 0% 0%;
+$paperBeigeColor: #f7f4e8;
+
+$paperBrownTexture: #DCD6CA url(../images/paperBrown.jpg) repeat scroll 0% 0%;
+$paperBrownColor: #DCD6CA;
 
 $plane: #f5f5f5;
 $spanTag: hsla(1, 0%, 65%, 1);
 
 
 $csBlueLight: #F7F8FA;
-$blue2: #DDE6EB;
+$headerColor: #FFFEFC;
+$blue2: #AFBDC7;
 $blue3: #97BCCC;
 
 

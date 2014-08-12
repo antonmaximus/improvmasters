@@ -21,8 +21,41 @@
     <link href="stylesheets/custom.css" rel="stylesheet" type="text/css" />
   </head>
   <body class='index'>
-    <!-- = partial('./layouts/header') -->
-    <section id='aboutus'>
+    <!-- %header.navbar.navbar-static-top#top{role:'banner'} -->
+    <!-- .container -->
+    <!-- .navbar-header -->
+    <!-- %button.navbar-toggle{type:'button', data:{toggle:'collapse', target:'.bs-navbar-collapse'}} -->
+    <!-- %span.sr-only Toggle navigation -->
+    <!-- %span.icon-bar -->
+    <!-- %span.icon-bar -->
+    <!-- %span.icon-bar -->
+    <!-- %a.navbar-brand{href:'./'} -->
+    <!-- = partial('./layouts/brandsvg') -->
+    <!-- %nav.collapse.navbar-collapse.bs-navbar-collapse{role:'navigation'} -->
+    <!-- %ul.nav.navbar-nav -->
+    <!-- / %li.active -->
+    <!-- /   %a{href:'#'}Getting Started -->
+    <!-- %ul.nav.navbar-nav.navbar-right -->
+    <!-- %li.active -->
+    <!-- %a{href:'#'}Join Us! -->
+    <!-- %li.active -->
+    <!-- %a{href:'#'}Members Area -->
+    <!-- %header.navbar.navbar.navbar-static-top{role: "navigation"} -->
+    <!-- .container -->
+    <!-- .navbar-header -->
+    <!-- %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"} -->
+    <!-- %span.sr-only Toggle navigation -->
+    <!-- %span.icon-bar -->
+    <!-- %span.icon-bar -->
+    <!-- %span.icon-bar -->
+    <!-- %a.navbar-brand{href:'./'} -->
+    <!-- = partial('./layouts/brandsvg') -->
+    <!-- .navbar-collapse.collapse -->
+    <!-- %nav.collapse.navbar-collapse.navbar-right{role: "navigation"} -->
+    <!-- %ul.nav.navbar-nav.navbar-right -->
+    <!-- %li.active -->
+    <!-- %a{href:'./members.html'}Members Area -->
+    <section class='block1'>
       <div class='container'>
         <div class='row'>
           <div class='col-xs-12'>
@@ -40,14 +73,16 @@
         </div>
       </div>
     </section>
-    <section id='leadership'>
+    <section class='block1' id='leadership'>
       <div class='container'>
         <div class='row group'>
           <div class='col-xs-12'>
             <h1>Current Leadership</h1>
             <div class='row'>
               <figure class='col-sm-4 col-md-3 text-center'>
-                <img class='oval' src='http://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg'>
+                <div class='oval'>
+                  <img src='http://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg'>
+                </div>
                 <figurecaption>
                   <span>John Doe</span>
                   <span>President</span>
@@ -61,11 +96,7 @@
         </div>
         <!-- / Add the extra clearfix for only the required viewport -->
         <!-- .clearfix.visible-md -->
-      </div>
-    </section>
-    <section class='officers'>
-      <div class='container'>
-        <div class='row'>
+        <div class='row officers'>
           <figure class='col-xs-12 col-sm-6 col-md-4'>
             <div class='row'>
               <div class='col-xs-6 col-sm-5 text-right'>
@@ -140,21 +171,21 @@
         <div class='row'>
           <div class='col-xs-12 col-sm-12 text-center'>
             <div class='navholder'>
-              <a alt='' class='navicon' href='./contact.html' id='emailako'>
-                <i class='fa fa-envelope-o fa-3x'></i>
+              <a alt='Contact Us' class='navicon' href='./contact.html'>
+                <i class='fa fa-envelope-o fa-2x'></i>
                 <span>Contact</span>
               </a>
             </div>
             <div class='navholder'>
               <a alt='' class='navicon' href='https://www.facebook.com/pages/ImprovMasters/172130356249549' target='_blank'>
-                <i class='fa fa-facebook-square fa-3x'></i>
+                <i class='fa fa-facebook-square fa-2x'></i>
                 <span>Like</span>
               </a>
             </div>
             <div class='navholder'>
-              <a alt='Twitter' class='navicon' href='./about.html' target='_blank'>
-                <i class='fa fa-flag fa-3x'></i>
-                <span>About</span>
+              <a alt='About Our Club' class='navicon' href='./about.html'>
+                <i class='fa fa-flag fa-2x'></i>
+                <span>Our Club</span>
               </a>
             </div>
           </div>

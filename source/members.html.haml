@@ -5,17 +5,175 @@ body_class: index
 
 = partial('./layouts/header')
 
+.jumbotron
+  .container
+    .row
+      .col-md-8
+        %h1 Members Area
+        %h3 This Friday at ImprovMasters...
+        %p 
+          %table
+            %tbody
+              %tr
+                %td Toastmaster
+                %td John Doe
+              %tr
+                %td Improvmaster
+                %td John Doe
+              %tr
+                %td Speaker
+                %td John Doe
+              %tr
+                %td Speech Evaluator
+                %td John Doe
+              %tr
+                %td Grammarian
+                %td John Doe
+              %tr
+                %td Timer
+                %td John Doe
+
+      .col-md-4
+        .signup.block1
+          %h3 Sign-up for a role!
+
+          %form.form-horizontal{ method:'POST', action:'http://forms.brace.io/aj9009@gmail.com'}
+            .form-group.form-group-sm
+              %label.col-sm-2.control-label{for: "signupName"} Name
+              .col-sm-10
+                %input#signupName.form-control{name:'name', placeholder: "", type: "", required:'true'}/
+            .form-group.form-group-sm
+              %label.col-sm-2.control-label{for: "signupEmail"} Email
+              .col-sm-10
+                %input#signupEmail.form-control{name:'_replyto', placeholder: "example@gmail.com", type: "email", required:'true'}/
+            .form-group.form-group-sm
+              %label.col-sm-2.control-label{for:'signupRole'} Role
+              .col-sm-10
+                %select.form-control#signupRole{name:'requested_role', required:'true' }
+                  %option{disabled: true, selected: true, value: "", style:"display: none;"} Select...
+                  %option{value: "Grammarian"} Grammarian
+                  %option{value: "Improvmaster"} Improvmaster
+                  %option{value: "Speaker"} Speaker
+                  %option{value: "Speech Evaluator"} Speech Evaluator
+                  %option{value: "Timer"} Timer 
+                  %option{value: "Toastmaster"} Toastmaster 
+            .buttonHolder
+              %button.btn.btn-primary{type:'submit'} Submit
+            %span.help-block You will receive an email when you're confirmed.
+
+        / .row 
+        /   .col-md-12
+        /     .signup.block1
+        /       If you're a non-member and wishing to join, 
+        /       %a.btn.btn-primary.btn-lg{href:'./newmembers.html', role: "button"} Learn more »
+
 %section.block1
   .container
     .row
       .col-xs-12
-        %h1 Competent Communication Manual
+        %h1 Meeting Roles
+        .row
+          .col-md-9
+            %ul.roles
+              %li 
+                %b Toastmaster.
+                The Toastmaster is the meeting’s director and host. This role won't usually be assigned until the participant is thoroughly familiar with the club and its procedures. 
+              %li 
+                %b Improvmaster.
+                The Improvmaster is the emcee during the improv part of the meeting. This role also requires familiarity with the club and its procedures. 
+              %li 
+                %b Speaker
+                The center of every Toastmasters meeting. (Well, in addition to the improv games.)
+              %li 
+                %b Evaluator.
+                Provides both verbal and written evaluations for speakers using the guide in the manual.
+              %li 
+                %b Grammarian.
+                Introduces the word of the day and comments on language usage during the course of the meeting.  Furthermore, the grammarian notes any word or sound used as a crutch by anyone who speaks during the meeting. (Words may be inappropriate interjections, such as <i>and, well, but, so</i> and <i>you know.</i> Sounds may be <i>ah, um</i> or <i>er.</i>)
+              %li 
+                %b Timer.  
+                Responsible for monitoring time for each meeting segment and each speaker. Also, the timer operates the timing signal, indicating to each speaker how long he or she has been talking.
+              %li
+                %b Table Topic Master.
+                The Topicsmaster will state a question or topic briefly and then call on a respondent for an impromptu talk. Each respondent receives a different topic or question and participants are called on at random.
+
+          .col-md-3
+            %img{src:'http://t-shirtguru.com/product-images/turtle-power-t-shirt-bustedtees-2.jpg', alt:'Share Building in Culver City'}
+
+
+%section.block2
+  .container
+    .row
+      .col-xs-12
+        %h1 Advanced Improv Techniques
+        .row
+          .col-md-8
+            %p Improv is an art. However, it is also a craft. A craft is something that is learned throgh practice, repetition, trial, error and hard work. Much like any other art, skill in improv is acquired over time. The more time spent improv-ing the greater the improvement (pun intended).  
+
+            %p Need to brush on the basics first?  Click here.
+            %div 
+              %p 
+                %b Add history.  
+              %p
+                The swiftest way to add reality and depth to a scene is to have the characters call up specifics from their common history. A simple exchange such as: <br/>
+                %i &mdash;“Are you trying to get us arrested?” <br/>
+                %i &mdash;“Like the time we ran naked through the Yale-Princeton lacrosse game?”
+              %p Though just a few words, it provides a great deal of information. The audience and actors now can infer that the characters are college boys, they are troublemakers, they are educated, they are in New England, they drink to excess, they have police records, they are old friends, and much more. With one sentence, the amount of information the improvisers can now draw on has grown greatly.
+              %p Some improv teachers suggest staying in the present tense as often as possible. I disagree. I think, however, that you should avoid talking too much about the future. Things in the future might happen, they might shape 
+            %div
+              %b 2. Say "Yes, and..."
+              %p It's your turn to contribute.  You have a responsibility to add to the scene. 
+              %b 3. Make Statements.
+              %p Avoid asking open-ended questions as it puts pressure on your partner.  Instead, turn that question into an 'offer' to help build the scene.
+            %div
+              %b 4. Don't try to be funny.
+              %p Going for the joke usually kills the scene. Instead, just say the first thing that comes to mind. Humor will come naturally out of the scene without any effort.
+            %div
+              %b 5. Make your partner look good &mdash; Listen &amp; Watch
+              %p Focus on listening and watching.  This helps you base your next line off of your partner's line.
+            %div
+              %b 6. There are NO mistakes.
+              %p Everything is an opportunity, so don't be afraid to initiate and commit.
+
+%section.block3
+  .container
+    .row
+      .col-xs-12
+        %h1 Competent Communication
         .row
           .col-md-8
             = partial('./layouts/ccm')
+          .col-md-3.umbrella
+            %h2 The Toastmaster Umbrella
+            %ul
+              %li
+                %span Toastmasters International
+                %span 13,500 clubs / 275,000 members 
+              %li
+                %span Region 2
+                %span 2,000 clubs / 13,000 members
+              %li
+                %span District 4
+                %span 260 clubs / 5,000 members 
+              %li
+                %span Division D
+                %span 35 clubs 
+              %li
+                %span Area 6
+                %span 5 clubs
+              %li
+                %span ImprovMasters Club
+                %span 47 members
+              %li
+                %span YOU
 
-
-
+%section.block4
+  .container
+    .row
+      .col-xs-12
+        %h1 Upcoming Competitions
+        .row
+          .col-md-8
 
 
 /   %h2 Sign up!

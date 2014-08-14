@@ -75,9 +75,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .jumbotron {
-  color: $paperGreyTextureColor;
+  color: $paperBeigeColor;
   // background: url(../images/improvclub.jpg) no-repeat fixed; 
-  background: url(../images/stage.jpg) 50% 62% no-repeat; 
+  background: url(../images/stage.jpg)  no-repeat; 
+  background-position: 50% 62%;
   background-size: cover;
   margin-bottom: 0;
 }
@@ -303,15 +304,12 @@ section {
 /*------------------------------------*\
     $MEMBERS
 \*------------------------------------*/
-
 td:first-child {
   vertical-align: text-top;
-}
-tr:first-child td:nth-child(2) {
-  padding-left: 15px;
+  padding-right: 15px;
 }
 td ul {
-  padding-left: 30px;
+  padding-left: 15px;
 }
 
 #accordion a {
@@ -323,6 +321,64 @@ td ul {
   }
 }
 
+
+.signup {
+  color: $shade;
+  padding: 5px 20px 10px;
+
+  h1, h2, h3 {
+    margin-top: 15px;
+  }
+
+  .buttonHolder {
+    text-align: right;
+  }
+  .help-block {
+    font-size: 12px;
+    font-style: italic;
+    text-align: right;
+  }
+}
+
+.roles {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.umbrella {
+  text-align: center;
+  vertical-align: bottom;
+  line-height: 100%;
+
+  ul {
+    padding-left: 0;  
+    list-style-type: none;
+    font-size: 14px;
+  }
+
+  li {
+    margin-bottom: 3px;
+  }
+  span {
+    display: block;
+  }
+
+  span:nth-child(2)::after {
+    font-family: FontAwesome;
+    content: '\f062';
+    // white-space:pre;
+    display: block;
+  }
+
+  span:first-child {
+    font-weight: bold;
+  }
+
+}
 
 /*------------------------------------*\
     $CONTACT

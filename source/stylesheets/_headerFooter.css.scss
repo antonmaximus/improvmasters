@@ -49,6 +49,16 @@ header {
 
   }
 
+  a {
+    color: $shade;
+    border-bottom: 0;
+
+    &:focus, &:hover, &:active {
+      color: $orangeDark;
+      border-bottom: 0;
+    }
+  }
+
 }
 
 

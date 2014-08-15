@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Improv Masters</title>
+    <meta charset='utf-8' content='text/html' http-equiv='content-type'>
+    <meta content='ie=edge,chrome=1' http-equiv='x-ua-compatible'>
+    <meta content='' name='description'>
+    <meta content='' name='author'>
+    <meta content='initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width' name='viewport'>
+    <meta content='initial-scale=1.0,user-scalable=no,maximum-scale=1' media='(device-height: 568px)' name='viewport'>
+    <meta content='yes' name='apple-mobile-web-app-capable'>
+    <meta content='black-translucent' name='apple-mobile-web-app-status-bar-style'>
+    <link href='/images/favicon.ico' rel='shortcut icon'>
+    <link href='/images/apple-touch-icon-precomposed.png' rel='apple-touch-icon-precomposed'>
+    <link href='/images/apple-touch-icon-57x57-precomposed.png' rel='apple-touch-icon-precomposed' sizes='57x57'>
+    <link href='/images/apple-touch-icon-72x72-precomposed.png' rel='apple-touch-icon-precomposed' sizes='72x72'>
+    <link href='/images/apple-touch-icon-114x114-precomposed.png' rel='apple-touch-icon-precomposed' sizes='114x114'>
+    <!-- $BOOTSTRAP  CSS CDN -->
+    <link href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' rel='stylesheet'>
+    <!-- Stylesheets -->
+    <link href="stylesheets/custom.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class='index'>
+    <!-- %header.navbar.navbar-static-top#top{role:'banner'} -->
+    <!-- .container -->
+    <!-- .navbar-header -->
+    <!-- %button.navbar-toggle{type:'button', data:{toggle:'collapse', target:'.bs-navbar-collapse'}} -->
+    <!-- %span.sr-only Toggle navigation -->
+    <!-- %span.icon-bar -->
+    <!-- %span.icon-bar -->
+    <!-- %span.icon-bar -->
+    <!-- %a.navbar-brand{href:'./'} -->
+    <!-- = partial('./layouts/brandsvg') -->
+    <!-- %nav.collapse.navbar-collapse.bs-navbar-collapse{role:'navigation'} -->
+    <!-- %ul.nav.navbar-nav -->
+    <!-- / %li.active -->
+    <!-- /   %a{href:'#'}Getting Started -->
+    <!-- %ul.nav.navbar-nav.navbar-right -->
+    <!-- %li.active -->
+    <!-- %a{href:'#'}Join Us! -->
+    <!-- %li.active -->
+    <!-- %a{href:'#'}Members Area -->
+    <header class='navbar navbar navbar-static-top' role='navigation'>
+      <div class='container'>
+        <div class='navbar-header'>
+          <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+            <span class='sr-only'>Toggle navigation</span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+          <a class='navbar-brand' href='./'>
+            <!-- = partial('./layouts/brandsvg') -->
+            Logo goes here
+          </a>
+        </div>
+        <div class='navbar-collapse collapse'>
+          <nav class='collapse navbar-collapse navbar-right' role='navigation'>
+            <ul class='nav navbar-nav navbar-right'>
+              <li class='active'>
+                <!-- %a{href:'./members.html'}Members Area -->
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- %header.navbar.navbar.navbar-static-top{role: "navigation"} -->
+    <!-- .container -->
+    <!-- .navbar-header -->
+    <!-- %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"} -->
+    <!-- %span.sr-only Toggle navigation -->
+    <!-- %span.icon-bar -->
+    <!-- %span.icon-bar -->
+    <!-- %span.icon-bar -->
+    <!-- %a.navbar-brand{href:'./'} -->
+    <!-- = partial('./layouts/brandsvg') -->
+    <!-- .navbar-collapse.collapse -->
+    <!-- %nav.collapse.navbar-collapse.navbar-right{role: "navigation"} -->
+    <!-- %ul.nav.navbar-nav.navbar-right -->
+    <!-- %li.active -->
+    <!-- %a{href:'./members.html'}Members Area -->
+    <section class='block1'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-xs-12 col-sm-12'>
+            <h1>Contact Us!</h1>
+            <p>
+              Email us at
+              <a id='aj-magic'>[Enable JavaScript Pls.]</a>
+              OR fill out the form below.
+            </p>
+            <div class='row'>
+              <div class='col-sm-12 col-md-6'>
+                <form action='http://forms.brace.io/aj9009@gmail.com' method='POST'>
+                  <div class='form-group'>
+                    <label for='exampleInputName'>Name</label>
+                    <input class='form-control' id='exampleInputName' name='name' placeholder='Enter name' required='true' type=''>
+                  </div>
+                  <div class='form-group'>
+                    <label for='exampleInputEmail1'>Email address</label>
+                    <input class='form-control' id='exampleInputEmail1' name='_replyto' placeholder='Enter email' required='true' type='email'>
+                  </div>
+                  <div class='form-group'>
+                    <label for='exampleTextArea'>Message</label>
+                    <textarea class='form-control' id='exampleInputEmail1' name='message' required='true' rows='5' type='email'></textarea>
+                  </div>
+                  <button class='btn btn-primary' type='submit'>Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      ;(function() { 
+        function nextChar(c) {
+            return String.fromCharCode(c.charCodeAt(0) + 1);
+        }
+        var x = "mail" + "to" + ":";
+        var y = "improv" + nextChar('l') + 'ast' + nextChar('d') + 'rs' + "\u0040g" + "mai" +"l\u002Eco" + nextChar('l');
+        document.getElementById('aj-magic').href = x + y; 
+        document.getElementById('aj-magic').innerHTML = y;
+      })();
+    </script>
+    <footer>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-xs-12 col-sm-12 text-center'>
+            <div class='navholder'>
+              <a alt='Contact Us' class='navicon' href='./contact.html'>
+                <i class='fa fa-envelope-o fa-2x'></i>
+                <span>Contact</span>
+              </a>
+            </div>
+            <div class='navholder'>
+              <a alt='' class='navicon' href='https://www.facebook.com/pages/ImprovMasters/172130356249549' target='_blank'>
+                <i class='fa fa-facebook-square fa-2x'></i>
+                <span>Like</span>
+              </a>
+            </div>
+            <div class='navholder'>
+              <a alt='About Our Club' class='navicon' href='./about.html'>
+                <i class='fa fa-flag fa-2x'></i>
+                <span>Our Club</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-xs-12'>
+            <hr>
+          </div>
+        </div>
+        <div class='row resources text-center'>
+          <div class='col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-3'>
+            <span>Improv Resources</span>
+            <ul>
+              <li>
+                <a alt='' href='#' target='_blank'>What is Improv?</a>
+              </li>
+              <li>
+                <a alt='' href='http://en.wikibooks.org/wiki/Improvisational_Acting/Rules' target='_blank'>Wikibooks on Improv</a>
+              </li>
+            </ul>
+          </div>
+          <div class='col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0'>
+            <span>About Toastmasters</span>
+            <ul>
+              <li>
+                <a alt='' href='#' target='_blank'>Toastmasters International</a>
+              </li>
+              <li>
+                <a alt='' href='#' target='_blank'>District Toastmasters</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JQUERY CDN -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js" type="text/javascript"></script>
+    <!-- JQUERY Fallback -->
+    <script>
+        window.jQuery || document.write('<script src="./fallback/jquery-2.1.1.min.js"><\/script>')
+    </script>
+    <!-- BOOTSTRAP JS CDN -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- BOOTSTRAP JS Fallback -->
+    <script>
+        if(typeof($.fn.modal) === 'undefined') {document.write('<script src="./fallback/3.1.1/js/bootstrap.min.js"><\/script>')}
+    </script>
+    <!-- BOOTSTRAP CSS Fallback -->
+    <!-- :javascript -->
+    <!-- $(document).ready(function() { -->
+    <!-- var itemToCheck = $('.carousel').css('position'); -->
+    <!-- if(itemToCheck != 'relative') { -->
+    <!-- $("head").prepend('<link rel="stylesheet" href="./fallback/3.1.1/css/bootstrap.min.css">');}}); -->
+    <!-- FONTAWESOME CSS CDN -->
+    <link href='//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css' rel='stylesheet'>
+    <!-- FONTAWESOME CSS Fallback -->
+    <script>
+        $(document).ready(function() {
+        var itemToCheck = $('.fa').css('display');
+        if(itemToCheck != 'inline-block') {
+        $("head").prepend('<link rel="stylesheet" href="./fallback/font-awesome-4.1.0/css/font-awesome.min.css">');}});
+    </script>
+    <!-- Javascripts -->
+    <script src="javascripts/ajCustom.js" type="text/javascript"></script>
+    <!-- :javascript -->
+  </body>
+</html>

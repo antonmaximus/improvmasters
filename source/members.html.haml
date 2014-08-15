@@ -10,28 +10,10 @@ body_class: index
     .row
       .col-md-8
         %h1 Members Area
-        %h3 This Friday at ImprovMasters...
+        %h3#fridayHeading See you this Friday at ImprovMasters...
         %p 
           %table
-            %tbody
-              %tr
-                %td Toastmaster
-                %td John Doe
-              %tr
-                %td Improvmaster
-                %td John Doe
-              %tr
-                %td Speaker
-                %td John Doe
-              %tr
-                %td Speech Evaluator
-                %td John Doe
-              %tr
-                %td Grammarian
-                %td John Doe
-              %tr
-                %td Timer
-                %td John Doe
+            %tbody#signup
 
       .col-md-4
         .signup.block1
@@ -60,12 +42,6 @@ body_class: index
             .buttonHolder
               %button.btn.btn-primary{type:'submit'} Submit
             %span.help-block You will receive an email when you're confirmed.
-
-        / .row 
-        /   .col-md-12
-        /     .signup.block1
-        /       If you're a non-member and wishing to join, 
-        /       %a.btn.btn-primary.btn-lg{href:'./newmembers.html', role: "button"} Learn more »
 
 %section.block1
   .container
@@ -105,40 +81,6 @@ body_class: index
   .container
     .row
       .col-xs-12
-        %h1 Advanced Improv Techniques
-        .row
-          .col-md-8
-            %p Improv is an art. However, it is also a craft. A craft is something that is learned throgh practice, repetition, trial, error and hard work. Much like any other art, skill in improv is acquired over time. The more time spent improv-ing the greater the improvement (pun intended).  
-
-            %p Need to brush on the basics first?  Click here.
-            %div 
-              %p 
-                %b Add history.  
-              %p
-                The swiftest way to add reality and depth to a scene is to have the characters call up specifics from their common history. A simple exchange such as: <br/>
-                %i &mdash;“Are you trying to get us arrested?” <br/>
-                %i &mdash;“Like the time we ran naked through the Yale-Princeton lacrosse game?”
-              %p Though just a few words, it provides a great deal of information. The audience and actors now can infer that the characters are college boys, they are troublemakers, they are educated, they are in New England, they drink to excess, they have police records, they are old friends, and much more. With one sentence, the amount of information the improvisers can now draw on has grown greatly.
-              %p Some improv teachers suggest staying in the present tense as often as possible. I disagree. I think, however, that you should avoid talking too much about the future. Things in the future might happen, they might shape 
-            %div
-              %b 2. Say "Yes, and..."
-              %p It's your turn to contribute.  You have a responsibility to add to the scene. 
-              %b 3. Make Statements.
-              %p Avoid asking open-ended questions as it puts pressure on your partner.  Instead, turn that question into an 'offer' to help build the scene.
-            %div
-              %b 4. Don't try to be funny.
-              %p Going for the joke usually kills the scene. Instead, just say the first thing that comes to mind. Humor will come naturally out of the scene without any effort.
-            %div
-              %b 5. Make your partner look good &mdash; Listen &amp; Watch
-              %p Focus on listening and watching.  This helps you base your next line off of your partner's line.
-            %div
-              %b 6. There are NO mistakes.
-              %p Everything is an opportunity, so don't be afraid to initiate and commit.
-
-%section.block3
-  .container
-    .row
-      .col-xs-12
         %h1 Competent Communication
         .row
           .col-md-8
@@ -167,35 +109,73 @@ body_class: index
               %li
                 %span YOU
 
-%section.block4
+
+%section.block3
   .container
     .row
       .col-xs-12
-        %h1 Upcoming Competitions
+        %h1 Advanced Improv Techniques
         .row
           .col-md-8
+            %p Improv is an art. However, it is also a craft. A craft is something that is learned throgh practice, repetition, trial, error and hard work. Much like any other art, skill in improv is acquired over time. The more time spent improv-ing the greater the improvement (pun intended).  
 
+            %p 
+              Need to brush on the basics first?   
+              %a{href:'./index.html#theimprov', alt:''}Click here.
+              Below are a few advanced techniques taken from Dan Goldstein's 
+              %a{href:'http://www.dangoldstein.com/howtoimprovise.html', alt:''}How To Improvise.
+            %div.convo
+              %b 1. Add history.  
+              %p
+                The swiftest way to add reality and depth to a scene is to have the characters call up specifics from their common history. A simple exchange such as:
+                %i Are you trying to get us arrested?
+                %i Like the time we ran naked through the Yale-Princeton lacrosse game?
+              %p Though just a few words, it provides a great deal of information. The audience and actors now can infer that the characters are college boys, they are troublemakers, they are educated, they are in New England, they drink to excess, they have police records, they are old friends, and much more. With one sentence, the amount of information the improvisers can now draw on has grown greatly.
+              %p Some improv teachers suggest staying in the present tense as often as possible. I disagree. I think, however, that you should avoid talking too much about the future. Things in the future might happen, they might shape 
+            %div
+              %b 2. Be very specific.
+              %p If you're going to say "nice car!", why not make it "wow, a 1979 Volvo Station Wagon!" If we know the Volvo owner is a 21 year old woman, suddenly we can visualize her (well, maybe you can’t, but I can: she has dried blue and white oil paint on her fingers, wears an extra large men’s dress shirt as a smock, and has long, straight, chestnut-brown hair). A more vivid image opens up a rich, new world. Adjectives accelerate scene development.
+            %div
+              %b 3. Commence with characterizing actions.
+              %p Characterizing actions are those which define a character's occupation or role, such as a teacher erasing a blackboard, a janitor cleaning up, or a child playing with toys, are good for starting scenes because they provide your fellow actors something to build on. They say a lot about what is going on and thus help the scene get to the point faster. Note that the scene need not (and often should not) be about drinking a beer or chopping lettuce just because that's what one of the characters is doing. Two people can start a scene engaged in an action together.  By putting status into this two-person action, a lot of information can be communicated very quickly.  For example, consider a scene which starts with one character hitting tennis balls, and the other chasing around after them.  The audience knows what the status is and where the characters are before the scene even starts.
+            %div
+              %b 4. Enter and exit with purpose.
+              %p Entering, exiting and staying put should have a reason, be justified. This is the purpose of playing the game Entrances and Exits (go figure) in rehearsal.  Don't just say "OK, bye" and walk out of a scene. Give a reason. Unjustified exits tend to be a problem novices have.
+            %div.convo
+              %b 5. Questions should give more than they take
+              %p Why ask a question on stage?  Are you expecting your fellow-actor  to have a ready answer?  What if she doesn't?  Doesn't that put her on the spot? Don't most questions slow the scene unnecessarily?  If it's a yes-no question, are you prepared to react to both yes and no answers? If no, then aren't you in trouble if the wrong answer comes back? If yes, then aren't you writing?
 
-/   %h2 Sign up!
-/   %h2 Advanced Improv Techniques
-/   %h2 Competent Communication Manual
-/   %h2 Where are you in the grand scheme of things
-/   %p Brisket aliqua in corned beef do, t-bone drumstick ea biltong qui kielbasa quis. Laborum cillum shankle tongue nulla proident meatloaf, corned beef turkey tenderloin jerky. Anim sirloin proident prosciutto jerky tempor ribeye corned beef dolor beef ribs nisi ex. Sausage pork loin incididunt tongue, ullamco dolore est non shankle in tail magna cupidatat bacon. Eu nulla short ribs rump capicola, excepteur pork loin deserunt ut sausage non.
+              %p Any question can be turned into a statement.  The nice thing about statements is that they provide information you and your fellow actor can immediately start building upon.  
 
-/   %p Anim sirloin proident prosciutto jerky tempor ribeye corned beef dolor beef ribs nisi ex. Sausage pork loin incididunt tongue, ullamco dolore est non shankle in tail magna cupidatat bacon. Eu nulla short ribs rump capicola, excepteur pork loin deserunt ut sausage non.
-/ .col-sm-6.col-md-6
-/   %img{src:'./images/toastmastersoutdoors.jpg', alt:'Become a Member!'}
-/ .row
-/ .col-md-8
-/   %h2 Frequently Asked Questions
-/   %ul.faq
-/     %li
-/       %span.question Bacon ipsum dolor sit amet spare ribs eu nisi in exercitation?
-/       %span.answer Sausage adipisicing enim andouille bacon. Doner velit adipisicing aute shoulder beef dolore pastrami in, minim fatback.
-/     %li
-/       %span.question Bacon ipsum dolor sit amet spare ribs eu nisi in exercitation?
-/       %span.answer Sausage adipisicing enim andouille bacon. Doner velit adipisicing aute shoulder beef dolore pastrami in, minim fatback.
-/     %li
-/       %span.question Bacon ipsum dolor sit amet spare ribs eu nisi in exercitation?
-/       %span.answer Sausage adipisicing enim andouille bacon. Doner velit adipisicing aute shoulder beef dolore pastrami in, minim fatback.
+              %p 
+                Why go through:
+                %i What time is it?
+                %i Uh, 3:30?
+                %i Are you ready?
+                %i Yeah, are you ready?
+                %i What are we doing?
+                %i I don't know.  What's the capital of South Dakota?
+                %i Uh, Fargo?
+
+              %p 
+                When you could have:
+                %i It's 3:30
+                %i We're right on schedule.
+                %i Johnson should be handing the teller the note right now.
+                %i It's 3:31.  Ski masks on.
+                %i Think I have time to run to the bathroom?
+                %i Why don't I ever get paired with Johnson?
+
+              %p Questions which don't require answers are fine.  Questions which provide more information then they demand are fine, too, e.g. "Think I have time to run to the bathroom?" This question introduces information, raises the stakes, and doesn't require the fellow actor to come up with a response. Rhetorical questions are fine, e.g., "Why don't I ever get paired with Johnson?"
+
+              %p 
+                A drill to point out question-asking *in rehearsal only*, is to respond to each other's questions with "that's a good question ..." or adopt the Yiddish practice of answering with the exact same question:
+                %i What do you want?  [bad question, contributes nothing to scene]
+                %i What do I want? [actor 2 points out that actor 1 is putting him on the spot instead of contributing]
+                %i Look, I'll get you the money tomorrow [hurrah! actor 1 gets the message]
+
 = partial('./layouts/footer')
+
+= javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"
+
+= javascript_include_tag "displaySignUpSheetInfo"

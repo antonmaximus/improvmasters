@@ -10,11 +10,9 @@ CAROUSEL
 
 
 /*------------------------------------*\
-    $IMPORTS
+    $VARIABLES
 \*------------------------------------*/
-// @import "reset";
 @import "variables";
-@import "headerFooter";
 
 
 /*------------------------------------*\
@@ -29,17 +27,24 @@ body {
 
 
   a {
+    color: $shade;
+    border-bottom: 2px dotted $orangeDark;
+
     &:focus {
       outline: none; //For firefox
     }
 
     &:focus, &:hover, &:active {
       text-decoration: none;
-      color: $orangeDark;
+      color: $shade;
+      border-bottom: 3px solid $orangeDark;
+
     }
   }
-
 }
+
+@import "headerFooter";
+
 
 h1, h2, h3, h4, h5 {
   font-family: $globalFontHeading;
@@ -337,6 +342,20 @@ td ul {
     font-size: 12px;
     font-style: italic;
     text-align: right;
+  }
+}
+
+.convo {
+  i {
+    display: block;
+    padding-left: 15px;
+  }
+
+  i::before {
+    content: "\2014\"";
+  }
+  i::after {
+    content: "\"";
   }
 }
 

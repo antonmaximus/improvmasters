@@ -4,22 +4,17 @@
     $MEDIA QUERY
 \*------------------------------------*/
 
-
-
-@media screen and (max-width: 1080px) {
-  .onpaper {
-    width: 85%;
-  }
-
-}
-
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) { //small screen
   .toastrightpics {
     padding-top: 0;
   }
+
+  .gmap {
+    margin-top: 30px;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) { //mobile screen
   .rightpics {
     margin-bottom: 20px;
     width: 100%;
@@ -37,6 +32,12 @@
   #leadership figure {
     margin-bottom: 10px;
   }
+
+.jumbotronSpecial {
+  h1, .signup{
+    margin-top: 30px;
+  }
+}
 
 }
 
@@ -57,11 +58,16 @@
   .toastleftpics {
     margin-right: 0;
   }
+
+  .jumbotronSpecial {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .jumbotron {
-    a svg {
+    svg {
       width: 95%;
     }
   }
@@ -70,23 +76,8 @@
 
 
 @media screen and (max-width: 375px) {
-  .navholder {
-    &+& {
-      margin-left: 1%;
-    }
-  }
-
-  .navicon {
-    height: 85px;
-    width: 85px;
-
-    i {
-      font-size: 30px;
-    }
-  }
-
   .jumbotron {
-    a svg {
+    svg {
       width: 100%;
     }
   }

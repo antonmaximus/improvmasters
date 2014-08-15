@@ -16,7 +16,7 @@ body_class: index
           OR fill out the form below.
         .row
           .col-sm-12.col-md-6
-            %form{method:'POST', action:'http://forms.brace.io/aj9009@gmail.com'}
+            %form#forBrace{method:'POST', action:''}
               .form-group
                 %label{for:'exampleInputName'} Name
                 %input.form-control#exampleInputName{name:'name', type:'', placeholder:'Enter name', required:'true'}
@@ -37,5 +37,9 @@ body_class: index
     var y = "improv" + nextChar('l') + 'ast' + nextChar('d') + 'rs' + "\u0040g" + "mai" +"l\u002Eco" + nextChar('l');
     document.getElementById('aj-magic').href = x + y; 
     document.getElementById('aj-magic').innerHTML = y;
+
+    var brace = 'http://forms.brace.io/'
+    document.getElementById('forBrace').setAttribute('action', brace + y )
+
   })();
 = partial('./layouts/footer')

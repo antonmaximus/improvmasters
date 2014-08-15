@@ -163,3 +163,22 @@ hr {
   }
 }
 
+
+
+@media screen and (max-width: 375px) {
+  .navholder {
+    &+& {
+      margin-left: 1%;
+    }
+  }
+
+  .navicon {
+    height: 85px;
+    width: 85px;
+
+    i {
+      font-size: 30px;
+    }
+  }
+}
+

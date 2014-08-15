@@ -1,17 +1,18 @@
 ---
 title: Improv Masters
 body_class: index
+index_options: home
 ---
 
 
 
 = partial('./layouts/header')
-.jumbotron
-  .container
+.jumbotron.jumbotronSpecial
+  .container.firstState.placeUnder
     %h1.intro
       = partial('./layouts/brandsvg')
     %p We provide a safe, fun, and spontaneous environment to practice improvisation, public speaking, and leadership skills all while having fun and relaxing on a Friday night.  
-%section.block1
+%section.block1.placeOver
   .container
     .row
       .col-md-12
@@ -37,7 +38,8 @@ body_class: index
         %p Improv is a form of theater in which the dialogue, action, story, and characters are made up in the moment it is performed. Improvisational techniques are used extensively in  stage, film, and television. However, the skills and processes of improvisation are used outside of the context of performing arts, as well. It is used in classrooms as an educational tool and in businesses as a way to develop communication skills, creative problem solving, and supportive team-work abilities.
     .row
       .col-md-12
-        %img.pull-right.rightpics{src:'http://cdn.funcheap.com/wp-content/uploads/2014/06/improv.jpg', alt:''}
+        / %img.pull-right.rightpics{src:'http://cdn.funcheap.com/wp-content/uploads/2014/06/improv.jpg', alt:''}
+        %img.pull-right.rightpics{src:'./images/improvtroupe.jpg', alt:''}
         %h2 How to play improv...
         %div
           %b 1. Always agree, always allow. 
@@ -51,18 +53,19 @@ body_class: index
           %b 4. Don't try to be funny.
           %p Going for the joke usually kills the scene. Instead, just say the first thing that comes to mind. Humor will come naturally out of the scene without any effort.
         %div
-          %b 5. Make your partner look good &mdash; Listen &amp; Watch
-          %p Focus on listening and watching.  This helps you base your next line off of your partner's line.     
+          %b 5. Make your partner look good.
+          %p When in a scene, the better you make your partner look the better the scene is going to be and, as a direct result, the better you are going to look. After all, you two are building a scene, so working together is a must.
         %div
-          %b 6. Tell a story.
-          %p The real magic of improv is when we see the players take totally random suggestions (like a plumber and a cab driver selling shoes in a leper colony ) and somehow "make it work". If all these unrelated elements are going to come together then it's going to happen in the course of an interesting tale.
+          %b 6. Listen &amp; Watch
+          %p Focus on listening and watching.  This helps you base your next line off of your partner's line.
         %div
           %b 7. Commit! Commit! Commit! Go big or go home! 
-          %p What go big or go home means in acting is to put all the emotion and energy into the scene regardless of any mistakes or improv other actors have made. 
+          %p What go big or go home means in acting is to put all the emotion and energy into the scene.
     .row
-      .onpaper.effect2
+      .onpaper.effect2.hidden-xs
         %h2 The Basics of Improv (by Tina Fey)
-        %img.pull-left.tinapic{src:'http://guineveregetssober.com/wp-content/uploads/2011/11/tina-fey-liz-lemon.png', alt:''}
+        / %img.pull-left.tinapic{src:'http://guineveregetssober.com/wp-content/uploads/2011/11/tina-fey-liz-lemon.png', alt:''}
+        %img.pull-left.tinapic{src:'./images/tina-fey-liz-lemon.png', alt:''}
         %p The first rule of improvisation is <strong>AGREE.</strong> Always agree, and <strong>SAY YES.</strong> When you’re improvising, this means you are required to agree with whatever your partner has created. So if we’re improvising and I say, “Freeze, I have a gun,” and you say, “That’s not a gun. It’s your finger. You’re pointing your finger at me,” our improvised scene has ground to a halt. But if I say, “Freeze, I have a gun!” and you say, “The gun I gave you for Christmas! You bastard!” then we have started a scene because we have AGREED that my finger is in fact a Christmas gun.
 
         %p Now, obviously in real life you’re not always going to agree with everything everyone says. But the Rule of Agreement reminds you to “respect what your partner has created” and to at least start from an open-minded place. Start with a YES and see where that takes you.
@@ -90,7 +93,6 @@ body_class: index
 
 
 
-
-
 = partial('./layouts/footer')
 
+    

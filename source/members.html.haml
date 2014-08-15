@@ -1,25 +1,26 @@
 ---
 title: Improv Masters
 body_class: index
+index_options: members
 ---
 
 = partial('./layouts/header')
 
-.jumbotron
-  .container
+.jumbotron.jumbotronSpecial
+  .container.firstState.placeUnder
     .row
-      .col-md-8
-        %h1 Members Area
-        %h3#fridayHeading See you this Friday at ImprovMasters...
-        %p 
+      .col-sm-6.col-md-8
+        %h1.specialH Members Area
+        %h3#fridayHeading
+        %p
           %table
             %tbody#signup
 
-      .col-md-4
+      .col-sm-6.col-md-4
         .signup.block1
           %h3 Sign-up for a role!
 
-          %form.form-horizontal{ method:'POST', action:'http://forms.brace.io/aj9009@gmail.com'}
+          %form.form-horizontal#forBrace{ method:'POST', action:''}
             .form-group.form-group-sm
               %label.col-sm-2.control-label{for: "signupName"} Name
               .col-sm-10
@@ -43,7 +44,7 @@ body_class: index
               %button.btn.btn-primary{type:'submit'} Submit
             %span.help-block You will receive an email when you're confirmed.
 
-%section.block1
+%section.block1.placeOver
   .container
     .row
       .col-xs-12
@@ -73,7 +74,7 @@ body_class: index
                 %b Table Topic Master.
                 The Topicsmaster will state a question or topic briefly and then call on a respondent for an impromptu talk. Each respondent receives a different topic or question and participants are called on at random.
 
-          .col-md-3
+          .col-md-3.hidden-xs
             %img{src:'http://t-shirtguru.com/product-images/turtle-power-t-shirt-bustedtees-2.jpg', alt:'Share Building in Culver City'}
 
 
@@ -83,29 +84,29 @@ body_class: index
       .col-xs-12
         %h1 Competent Communication
         .row
-          .col-md-8
+          .col-md-9
             = partial('./layouts/ccm')
-          .col-md-3.umbrella
+          .col-md-3.hidden-xs.umbrella
             %h2 The Toastmaster Umbrella
             %ul
               %li
                 %span Toastmasters International
-                %span 13,500 clubs / 275,000 members 
+                %span 13,500 clubs 
               %li
-                %span Region 2
-                %span 2,000 clubs / 13,000 members
+                %span Region 10
+                %span 1,225 clubs
               %li
-                %span District 4
-                %span 260 clubs / 5,000 members 
+                %span District 1
+                %span 160 clubs
               %li
-                %span Division D
-                %span 35 clubs 
+                %span Division F
+                %span 29 clubs 
               %li
-                %span Area 6
+                %span Area 2
                 %span 5 clubs
               %li
-                %span ImprovMasters Club
-                %span 47 members
+                %span ImprovMasters
+                %span our club
               %li
                 %span YOU
 
@@ -116,15 +117,15 @@ body_class: index
       .col-xs-12
         %h1 Advanced Improv Techniques
         .row
-          .col-md-8
+          .col-md-9
             %p Improv is an art. However, it is also a craft. A craft is something that is learned throgh practice, repetition, trial, error and hard work. Much like any other art, skill in improv is acquired over time. The more time spent improv-ing the greater the improvement (pun intended).  
 
             %p 
               Need to brush on the basics first?   
               %a{href:'./index.html#theimprov', alt:''}Click here.
-              Below are a few advanced techniques taken from Dan Goldstein's 
+              Most of the advanced techniques below were taken from Dan Goldstein's 
               %a{href:'http://www.dangoldstein.com/howtoimprovise.html', alt:''}How To Improvise.
-            %div.convo
+            %div
               %b 1. Add history.  
               %p
                 The swiftest way to add reality and depth to a scene is to have the characters call up specifics from their common history. A simple exchange such as:
@@ -134,20 +135,31 @@ body_class: index
               %p Some improv teachers suggest staying in the present tense as often as possible. I disagree. I think, however, that you should avoid talking too much about the future. Things in the future might happen, they might shape 
             %div
               %b 2. Be very specific.
-              %p If you're going to say "nice car!", why not make it "wow, a 1979 Volvo Station Wagon!" If we know the Volvo owner is a 21 year old woman, suddenly we can visualize her (well, maybe you can’t, but I can: she has dried blue and white oil paint on her fingers, wears an extra large men’s dress shirt as a smock, and has long, straight, chestnut-brown hair). A more vivid image opens up a rich, new world. Adjectives accelerate scene development.
+              %p 
+                If you're going to say 
+                %i "nice car!", 
+                why not make it 
+                %i "wow, a 1979 Volvo Station Wagon!" 
+                If we know the Volvo owner is a 21 year old woman, suddenly we can visualize her (well, maybe you can’t, but I can: she has dried blue and white oil paint on her fingers, wears an extra large men’s dress shirt as a smock, and has long, straight, chestnut-brown hair). A more vivid image opens up a rich, new world. Adjectives accelerate scene development.
             %div
-              %b 3. Commence with characterizing actions.
+              %b 3. Tell a story.
+              %p The real magic of improv is when we see the players take totally random suggestions (like a plumber and a cab driver selling shoes in a leper colony ) and somehow "make it work". If all these unrelated elements are going to come together then it's going to happen in the course of an interesting tale.
+            %div
+              %b 4. Commence with characterizing actions.
               %p Characterizing actions are those which define a character's occupation or role, such as a teacher erasing a blackboard, a janitor cleaning up, or a child playing with toys, are good for starting scenes because they provide your fellow actors something to build on. They say a lot about what is going on and thus help the scene get to the point faster. Note that the scene need not (and often should not) be about drinking a beer or chopping lettuce just because that's what one of the characters is doing. Two people can start a scene engaged in an action together.  By putting status into this two-person action, a lot of information can be communicated very quickly.  For example, consider a scene which starts with one character hitting tennis balls, and the other chasing around after them.  The audience knows what the status is and where the characters are before the scene even starts.
             %div
-              %b 4. Enter and exit with purpose.
-              %p Entering, exiting and staying put should have a reason, be justified. This is the purpose of playing the game Entrances and Exits (go figure) in rehearsal.  Don't just say "OK, bye" and walk out of a scene. Give a reason. Unjustified exits tend to be a problem novices have.
-            %div.convo
-              %b 5. Questions should give more than they take
+              %b 5. Enter and exit with purpose.
+              %p 
+                Entering, exiting and staying put should have a reason, be justified. This is the purpose of playing the game Entrances and Exits (go figure) in rehearsal.  Don't just say 
+                %i "OK, bye" 
+                and walk out of a scene. Give a reason. Unjustified exits tend to be a problem novices have.
+            %div
+              %b 6. Questions should give more than they take
               %p Why ask a question on stage?  Are you expecting your fellow-actor  to have a ready answer?  What if she doesn't?  Doesn't that put her on the spot? Don't most questions slow the scene unnecessarily?  If it's a yes-no question, are you prepared to react to both yes and no answers? If no, then aren't you in trouble if the wrong answer comes back? If yes, then aren't you writing?
 
               %p Any question can be turned into a statement.  The nice thing about statements is that they provide information you and your fellow actor can immediately start building upon.  
 
-              %p 
+              %p.convo
                 Why go through:
                 %i What time is it?
                 %i Uh, 3:30?
@@ -157,7 +169,7 @@ body_class: index
                 %i I don't know.  What's the capital of South Dakota?
                 %i Uh, Fargo?
 
-              %p 
+              %p.convo
                 When you could have:
                 %i It's 3:30
                 %i We're right on schedule.
@@ -166,9 +178,13 @@ body_class: index
                 %i Think I have time to run to the bathroom?
                 %i Why don't I ever get paired with Johnson?
 
-              %p Questions which don't require answers are fine.  Questions which provide more information then they demand are fine, too, e.g. "Think I have time to run to the bathroom?" This question introduces information, raises the stakes, and doesn't require the fellow actor to come up with a response. Rhetorical questions are fine, e.g., "Why don't I ever get paired with Johnson?"
-
               %p 
+                Questions which don't require answers are fine.  Questions which provide more information then they demand are fine, too, e.g. 
+                %i "Think I have time to run to the bathroom?" 
+                This question introduces information, raises the stakes, and doesn't require the fellow actor to come up with a response. Rhetorical questions are fine, e.g., 
+                %i "Why don't I ever get paired with Johnson?"
+
+              %p.convo
                 A drill to point out question-asking *in rehearsal only*, is to respond to each other's questions with "that's a good question ..." or adopt the Yiddish practice of answering with the exact same question:
                 %i What do you want?  [bad question, contributes nothing to scene]
                 %i What do I want? [actor 2 points out that actor 1 is putting him on the spot instead of contributing]
@@ -176,6 +192,15 @@ body_class: index
 
 = partial('./layouts/footer')
 
-= javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"
 
-= javascript_include_tag "displaySignUpSheetInfo"
+:javascript
+  ;(function() { 
+    function nextChar(c) {
+        return String.fromCharCode(c.charCodeAt(0) + 1);
+    }
+    var y = "improv" + nextChar('l') + 'ast' + nextChar('d') + 'rs' + "\u0040g" + "mai" +"l\u002Eco" + nextChar('l');
+
+    var brace = 'http://forms.brace.io/'
+    document.getElementById('forBrace').setAttribute('action', brace + y )
+
+  })();

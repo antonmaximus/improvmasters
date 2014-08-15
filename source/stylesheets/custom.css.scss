@@ -88,6 +88,7 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 0;
 }
 
+
 .intro svg {
   width: 55%;
   fill: $paperGreyTextureColor;
@@ -309,6 +310,56 @@ section {
 /*------------------------------------*\
     $MEMBERS
 \*------------------------------------*/
+
+.jumbotronSpecial {
+  padding-top: 0;
+  h1, .signup{
+    margin-top: 68px;
+  }
+}
+
+
+.firstState {
+  max-height: 0;
+}
+
+.secondState {
+  max-height: 300vh;
+  transition-property: max-height padding;
+  transition-duration: 2.5s;
+  transition-timing-function: ease-in-out;
+}
+
+
+.signup {
+  margin-top: 0px;
+  color: $shade;
+  padding: 5px 20px 10px;
+
+  h1, h2, h3 {
+    margin-top: 15px;
+  }
+
+  .buttonHolder {
+    text-align: right;
+  }
+  .help-block {
+    font-size: 12px;
+    font-style: italic;
+    text-align: right;
+  }
+}
+.placeUnder {
+  position: relative;
+  z-index: 1;
+}
+.placeOver {
+  position: relative;
+  z-index: 2;
+}
+
+
+
 td:first-child {
   vertical-align: text-top;
   padding-right: 15px;
@@ -327,23 +378,7 @@ td ul {
 }
 
 
-.signup {
-  color: $shade;
-  padding: 5px 20px 10px;
 
-  h1, h2, h3 {
-    margin-top: 15px;
-  }
-
-  .buttonHolder {
-    text-align: right;
-  }
-  .help-block {
-    font-size: 12px;
-    font-style: italic;
-    text-align: right;
-  }
-}
 
 .convo {
   i {

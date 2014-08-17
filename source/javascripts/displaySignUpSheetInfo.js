@@ -26,7 +26,7 @@ $(document).ready(function(){
   var url = "https://spreadsheets.google.com/feeds/list/" + targetSheet + "/od6/public/values?alt=json-in-script&callback=?"; 
 
 
-  var message;
+  var message = "See you at ImprovMasters!"
   $.getJSON(url,{}, function (data) { 
   })
   .done(function(data) {
@@ -39,6 +39,7 @@ $(document).ready(function(){
       var entry = data.feed.entry,
         length = entry.length,
         fragment = document.createDocumentFragment(),
+        lengthFlag = 0,
         tr, td, role, name; //declare coz we know we're gonna use 'em.
 
       for(var i=0; i<length; i++) {
@@ -61,18 +62,18 @@ $(document).ready(function(){
 
         fragment.appendChild(tr);
 
+        lengthFlag++;
         }
-        document.getElementById("signup").appendChild(fragment);
 
-        message = "This Friday the " + thisFriday.getDate() + suffix(thisFriday.getDate()) + " at ImprovMasters..."
+        if(lengthFlag > 0) {
+          document.getElementById("roster").appendChild(fragment);
+          message = "This Friday the " + thisFriday.getDate() + suffix(thisFriday.getDate()) + " at ImprovMasters..."
+        }
       }
-      else {
-        message = "See you this Friday at ImprovMasters..."
-      }
+
   })
   .fail(function(jqXHR, textStatus, errorThrown) { 
     console.log('getJSON request failed! ' + textStatus);
-    message = "See you this Friday at ImprovMasters..."
   })
   .always(function() {
     document.getElementById("fridayHeading").innerHTML = message;

@@ -14,19 +14,9 @@ body_class: index
         %p Joining means you can take a more active role in meetings by giving speeches, performing functionary roles including Toastmaster, Grammarian, Timer, Improv Master, Table Topics Master, and Speech Evaluator, and even run for office in the Club.
         %p The membership fee is $72 for six months. The first time you join a Toastmasters club, it costs an additional $22 for two books: The Competent Communicator, which has ten speech assignments designed to help you improve your speaking skills rapidly; and The Competent Leader, which has assignments that help you build leadership skills.
         %p.pdf
-          %a.btn.btn-primary.btn-lg{href:'./newmembers.html', role: "button"} 
+          %a.btn.btn-primary.btn-lg{href:'http://www.toastmasters.org/memberapp.aspx', role: "button", target:'_blank'} 
             %i.fa.fa-file-pdf-o 
             %span Download PDF File
-    / .row
-    /   .col-xs-12
-    /     %h1 Become a Member!
-    /     .row
-    /       .col-md-8
-    /         %p Brisket aliqua in corned beef do, t-bone drumstick ea biltong qui kielbasa quis. Laborum cillum shankle tongue nulla proident meatloaf, corned beef turkey tenderloin jerky. Anim sirloin proident prosciutto jerky tempor ribeye corned beef dolor beef ribs nisi ex. Sausage pork loin incididunt tongue, ullamco dolore est non shankle in tail magna cupidatat bacon. Eu nulla short ribs rump capicola, excepteur pork loin deserunt ut sausage non.
-
-    /         %p Anim sirloin proident prosciutto jerky tempor ribeye corned beef dolor beef ribs nisi ex. Sausage pork loin incididunt tongue, ullamco dolore est non shankle in tail magna cupidatat bacon. Eu nulla short ribs rump capicola, excepteur pork loin deserunt ut sausage non.
-    /       .col-md-4
-    /         %img{src:'./images/unclesam.jpg', alt:'Become a Member!'}
     .row
       .col-md-12  
         %img.pull-left.rosiepic{src:'./images/rosie.jpg', alt:'Become a Member!'}
@@ -43,7 +33,24 @@ body_class: index
             %span.answer  No, some of our members do perform in various ways, but ImprovMasters is a Toastmasters club with improv, not a performance group.
           %li
             %span.question What skill level are the members?
-            %span.answer We are a bunch of ranked amateurs.  We like it that way.  
+            %span.answer We are a bunch of ranked amateurs.  We like it that way. 
+          %li
+            %span.question Who do I contact for further inquiries?
+            %span.answer 
+              You can send us 
+              %a{href:"contact.html", alt:''}an email here 
+              or visit us during our club meeting every Friday at 8PM.
 
+    .row 
+      .col-md-12
+        %h2 Benefits of participating fully in the ImprovMasters experience
+        %ul
+          %li Great practice at being in the moment while interacting with other people
+          %li Becoming more flexible and spontaneous
+          %li Getting better at listening and responding authentically
+          %li Becoming a better speaker and Honing your voice as a speaker
+          %li Becoming more comfortable at speaking off the cuff
+          %li Developing leadership skills and leading group discussions
+          %li A great way to meet new people in the West LA area
 
 = partial('./layouts/footer')

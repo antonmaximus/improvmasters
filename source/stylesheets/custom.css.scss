@@ -81,6 +81,8 @@ h1, h2, h3, h4, h5 {
 
 .jumbotron {
   color: $paperBeigeColor;
+  position: relative;
+  // z-index: -10;
   // background: url(../images/improvclub.jpg) no-repeat fixed; 
   background: url(../images/stage.jpg)  no-repeat; 
   background-position: 50% 62%;
@@ -91,6 +93,7 @@ h1, h2, h3, h4, h5 {
 
 .intro svg {
   width: 55%;
+  height: 100%; //for Safari
   fill: $paperGreyTextureColor;
 }
 
@@ -183,7 +186,9 @@ section {
   width: 15%;
   margin-right: 2%;
 }
-
+.tinalink {
+  font-style: italic;
+}
 // .block3 img {
 //   width: 100%;
 // }
@@ -228,7 +233,7 @@ section {
       height: 100%;
       width: auto;
       vertical-align: middle;
-      margin: 0 -100%;
+      margin: 0 -100%; // To center img if it's larger than container
     }
 
   }
@@ -249,13 +254,28 @@ section {
     margin-bottom: 3%;
   }
 
-  img {
+  .circle {
     height: 100px;
     width: 100px;
+    line-height: 100px; //this is impt for vertical align
     border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 3px 4px 10px #888;
+    border: 3px solid white;
+    box-shadow: 2px 4px 10px #888;
+    margin: 0 auto 0 auto;
+    overflow: hidden;
+    text-align: center;
+
+
+    img {
+      height: auto; //switch height & width values if image doesn't cover.
+      width: 100%;
+      // vertical-align: middle;
+      // margin: 0 -100%;
+    }
+
   }
+
+
 
   figurecaption {
     display: table-cell;
@@ -305,6 +325,9 @@ section {
     font-weight: bold;
     font-style: italic;
   }
+  .answer {
+    // max-width: 850px;
+  }
 }
 
 /*------------------------------------*\
@@ -313,11 +336,61 @@ section {
 
 .jumbotronSpecial {
   padding-top: 0;
-  h1, .signup{
+  .intro svg {
     margin-top: 68px;
   }
 }
 
+.wrapper {
+  box-sizing: content-box;
+}
+.greetings {
+  vertical-align: top;
+  display: inline-block;
+  width: 66%;
+  margin-top: 68px;
+}
+
+.encloser {
+  box-sizing: border-box;
+  width: 33%;
+  display: inline-block;
+  margin-top: 68px;
+  padding: 0 20px 0 0;
+
+}
+.nonfloatingForm {
+  background-color: $paperBeigeColor;
+  padding: 20px 25px 10px;
+
+
+  color: $shade;
+  // padding: 5px 20px 10px;
+
+  h1, h2, h3 {
+    margin-top: 15px;
+  }
+
+
+  table {
+    width: 100%;
+  }
+  td {
+    padding-bottom: 8px;
+
+  }
+
+  .buttonHolder {
+    text-align: right;
+    margin-top: 10px;
+  }
+  .help-block {
+    font-size: 12px;
+    font-style: italic;
+    text-align: right;
+  }
+
+}
 
 .firstState {
   max-height: 0;
@@ -331,31 +404,14 @@ section {
 }
 
 
-.signup {
-  margin-top: 0px;
-  color: $shade;
-  padding: 5px 20px 10px;
 
-  h1, h2, h3 {
-    margin-top: 15px;
-  }
-
-  .buttonHolder {
-    text-align: right;
-  }
-  .help-block {
-    font-size: 12px;
-    font-style: italic;
-    text-align: right;
-  }
-}
 .placeUnder {
   position: relative;
   z-index: 1;
 }
 .placeOver {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 
@@ -407,6 +463,20 @@ td ul {
   text-align: center;
   vertical-align: bottom;
   line-height: 100%;
+  // background-color: $paperBrownColor;
+
+  // padding: 20px 0 10px;
+
+  .onpaper {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-top: 0;
+  }
+
+  h1, h2 {
+    margin-top: 0;
+  }
 
   ul {
     padding-left: 0;  

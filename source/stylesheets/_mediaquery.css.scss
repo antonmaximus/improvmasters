@@ -12,6 +12,17 @@
   .gmap {
     margin-top: 30px;
   }
+
+  .greetings {
+    width: 54%;
+    padding-left: 15px;
+  }
+
+  .encloser {
+    // display: block;
+    width: 45%
+  }
+
 }
 
 @media screen and (max-width: 768px) { //mobile screen
@@ -33,11 +44,26 @@
     margin-bottom: 10px;
   }
 
-.jumbotronSpecial {
-  h1, .signup{
-    margin-top: 30px;
+  .jumbotronSpecial {
+    h1, .intro svg, .signup{
+      margin-top: 30px;
+    }
   }
-}
+
+  .greetings {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .encloser {
+    margin-top: 10px;
+    width: 100%;
+    padding-right: 0;
+
+    .nonfloatingForm {
+      padding-top: 10px;
+    }
+  }
 
 }
 

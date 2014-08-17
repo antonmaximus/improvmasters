@@ -16,13 +16,18 @@ header {
   }
 
   $linkColor: $shade;
-  $hoverColor: #E36C22;
+  // $hoverColor: #E36C22;
+  // $hoverColorBackground: #f2f6fa;
+  $hoverColor: $headerColor;
+  $hoverColorBackground: $orangeDark;
   background-color: $headerColor;
 
   .nav > li > a, a {
     color: $linkColor;
     &:hover {
-      background-color: transparent;
+      // background-color: transparent;
+      background-color: $hoverColorBackground;
+
       color: $hoverColor;
     }
   }
@@ -30,23 +35,16 @@ header {
   /* mobile version */
   button.navbar-toggle {
     .icon-bar  { background-color: $linkColor;}
-    &:hover .icon-bar { background-color: $hoverColor;}
-  }
-
-
-  .nav > li > a:hover, 
-  .nav > li > a:focus {
-    background-color: transparent;
+    &:hover {border: 1px solid #888; }
+    &:hover .icon-bar { background-color: $hoverColorBackground;}
   }
 
   svg {
     width: 225px;
-    fill: $linkColor;
+  }
 
-    &:hover {
-      fill: $hoverColor;
-    }
-
+  .navbar-brand:hover {
+    fill: $hoverColor
   }
 
   a {
@@ -62,16 +60,21 @@ header {
 }
 
 
-@media screen and (max-width: 768px) {
-  header {
-    .nav > li > a, a {
-      &:hover {
-        background-color: #EEE;
-      }
-    }
-  }
-
+.navbar-static-top {
+  z-index: 1000;
+  border-width: 0 0 0;
 }
+
+// @media screen and (max-width: 768px) {
+//   header {
+//     .nav > li > a, a {
+//       &:hover {
+//         background-color: #EEE;
+//       }
+//     }
+//   }
+
+// }
 
 /*------------------------------------*\
     $FOOTER

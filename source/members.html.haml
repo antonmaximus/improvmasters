@@ -7,42 +7,73 @@ index_options: members
 = partial('./layouts/header')
 
 .jumbotron.jumbotronSpecial
-  .container.firstState.placeUnder
-    .row
-      .col-sm-6.col-md-8
-        %h1.specialH Members Area
-        %h3#fridayHeading
-        %p
+  .container.firstState.placeUnder.wrapper
+    .greetings
+      %h1 Members' Area
+      %h3#fridayHeading
+      %p
+        %table
+          %tbody#roster
+    .encloser
+      .nonfloatingForm
+        %h3 Sign-up for a role!
+        %form.form-horizontal#forBrace{ method:'POST', action:'http://forms.brace.io/aj9009@gmail.com'}
           %table
-            %tbody#signup
+            %tbody  
+              %tr.form-group
+                %td 
+                  %label.control-label{for: "signupName"} Name
+                %td 
+                  %input#signupName.form-control{name:'Name', placeholder: "", type: "", required:'true'}/
+              %tr.form-group.form-group-sm
+                %td
+                  %label.control-label{for: "signupEmail"} Email
+                %td 
+                  %input#signupEmail.form-control{name:'_replyto', placeholder: "example@gmail.com", type: "email", required:'true'}/
+              %tr.form-group.form-group-sm
+                %td
+                  %label.control-label{for:'signupRole'} Role
+                %td
+                  %select.form-control#signupRole{name:'Requested_role_this_Friday', required:'true' }
+                    %option{disabled: true, selected: true, value: "", style:"display: none;"} Select...
+                    %option{value: "Grammarian"} Grammarian
+                    %option{value: "Improvmaster"} Improvmaster
+                    %option{value: "Speaker"} Speaker
+                    %option{value: "Speech Evaluator"} Speech Evaluator
+                    %option{value: "Timer"} Timer 
+                    %option{value: "Toastmaster"} Toastmaster 
+          .buttonHolder
+            %button.btn.btn-primary{type:'submit'} Submit
+          %span.help-block You will receive an email when confirmed.
 
-      .col-sm-6.col-md-4
-        .signup.block1
-          %h3 Sign-up for a role!
 
-          %form.form-horizontal#forBrace{ method:'POST', action:''}
-            .form-group.form-group-sm
-              %label.col-sm-2.control-label{for: "signupName"} Name
-              .col-sm-10
-                %input#signupName.form-control{name:'name', placeholder: "", type: "", required:'true'}/
-            .form-group.form-group-sm
-              %label.col-sm-2.control-label{for: "signupEmail"} Email
-              .col-sm-10
-                %input#signupEmail.form-control{name:'_replyto', placeholder: "example@gmail.com", type: "email", required:'true'}/
-            .form-group.form-group-sm
-              %label.col-sm-2.control-label{for:'signupRole'} Role
-              .col-sm-10
-                %select.form-control#signupRole{name:'requested_role', required:'true' }
-                  %option{disabled: true, selected: true, value: "", style:"display: none;"} Select...
-                  %option{value: "Grammarian"} Grammarian
-                  %option{value: "Improvmaster"} Improvmaster
-                  %option{value: "Speaker"} Speaker
-                  %option{value: "Speech Evaluator"} Speech Evaluator
-                  %option{value: "Timer"} Timer 
-                  %option{value: "Toastmaster"} Toastmaster 
-            .buttonHolder
-              %button.btn.btn-primary{type:'submit'} Submit
-            %span.help-block You will receive an email when you're confirmed.
+/ .col-sm-6.col-md-4
+/ .signup.block1.placeUnder
+/   %h3 Sign-up for a role!
+
+/   %form.form-horizontal#forBrace{ method:'POST', action:''}
+/     .form-group.form-group-sm
+/       %label.col-sm-2.control-label{for: "signupName"} Name
+/       .col-sm-10
+/         %input#signupName.form-control{name:'name', placeholder: "", type: "", required:'true'}/
+/     .form-group.form-group-sm
+/       %label.col-sm-2.control-label{for: "signupEmail"} Email
+/       .col-sm-10
+/         %input#signupEmail.form-control{name:'_replyto', placeholder: "example@gmail.com", type: "email", required:'true'}/
+/     .form-group.form-group-sm
+/       %label.col-sm-2.control-label{for:'signupRole'} Role
+/       .col-sm-10
+/         %select.form-control#signupRole{name:'requested_role', required:'true' }
+/           %option{disabled: true, selected: true, value: "", style:"display: none;"} Select...
+/           %option{value: "Grammarian"} Grammarian
+/           %option{value: "Improvmaster"} Improvmaster
+/           %option{value: "Speaker"} Speaker
+/           %option{value: "Speech Evaluator"} Speech Evaluator
+/           %option{value: "Timer"} Timer 
+/           %option{value: "Toastmaster"} Toastmaster 
+/     .buttonHolder
+/       %button.btn.btn-primary{type:'submit'} Submit
+/     %span.help-block You will receive an email when you're confirmed.
 
 %section.block1.placeOver
   .container
@@ -74,9 +105,31 @@ index_options: members
                 %b Table Topic Master.
                 The Topicsmaster will state a question or topic briefly and then call on a respondent for an impromptu talk. Each respondent receives a different topic or question and participants are called on at random.
 
-          .col-md-3.hidden-xs
-            %img{src:'http://t-shirtguru.com/product-images/turtle-power-t-shirt-bustedtees-2.jpg', alt:'Share Building in Culver City'}
-
+          .col-md-3.hidden-xs.hidden-sm
+            .umbrella
+              .onpaper.effect2
+                %h2 You Are Here
+                %ul
+                  %li
+                    %span Toastmasters International
+                    %span 13,500 clubs 
+                  %li
+                    %span Region 10
+                    %span 1,225 clubs
+                  %li
+                    %span District 1
+                    %span 160 clubs
+                  %li
+                    %span Division F
+                    %span 29 clubs 
+                  %li
+                    %span Area 2
+                    %span 5 clubs
+                  %li
+                    %span ImprovMasters
+                    %span our club
+                  %li
+                    %span YOU
 
 %section.block2
   .container
@@ -86,29 +139,11 @@ index_options: members
         .row
           .col-md-9
             = partial('./layouts/ccm')
-          .col-md-3.hidden-xs.umbrella
-            %h2 The Toastmaster Umbrella
-            %ul
-              %li
-                %span Toastmasters International
-                %span 13,500 clubs 
-              %li
-                %span Region 10
-                %span 1,225 clubs
-              %li
-                %span District 1
-                %span 160 clubs
-              %li
-                %span Division F
-                %span 29 clubs 
-              %li
-                %span Area 2
-                %span 5 clubs
-              %li
-                %span ImprovMasters
-                %span our club
-              %li
-                %span YOU
+            
+          .col-md-3.hidden-xs.hidden-sm
+            %img{src:'./images/competent.png', alt:'Competent Communication Manual'}
+
+          
 
 
 %section.block3
@@ -189,18 +224,20 @@ index_options: members
                 %i What do you want?  [bad question, contributes nothing to scene]
                 %i What do I want? [actor 2 points out that actor 1 is putting him on the spot instead of contributing]
                 %i Look, I'll get you the money tomorrow [hurrah! actor 1 gets the message]
+          .col-md-3.hidden-xs
+            %img{src:'./images/improvImage.jpg', alt:'ImprovMasters'}
 
 = partial('./layouts/footer')
 
 
-:javascript
-  ;(function() { 
-    function nextChar(c) {
-        return String.fromCharCode(c.charCodeAt(0) + 1);
-    }
-    var y = "improv" + nextChar('l') + 'ast' + nextChar('d') + 'rs' + "\u0040g" + "mai" +"l\u002Eco" + nextChar('l');
+/ :javascript
+/   ;(function() { 
+/     function nextChar(c) {
+/         return String.fromCharCode(c.charCodeAt(0) + 1);
+/     }
+/     var y = "improv" + nextChar('l') + 'ast' + nextChar('d') + 'rs' + "\u0040g" + "mai" +"l\u002Eco" + nextChar('l');
 
-    var brace = 'http://forms.brace.io/'
-    document.getElementById('forBrace').setAttribute('action', brace + y )
+/     var brace = 'http://forms.brace.io/'
+/     document.getElementById('forBrace').setAttribute('action', brace + y )
 
-  })();
+/   })();

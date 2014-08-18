@@ -1,14 +1,8 @@
 
-
 /*------------------------------------*\
     $HEADER
 \*------------------------------------*/
 
-// Move down content because we have a fixed navbar that is 50px tall
-// body {
-//   padding-top: 50px;
-//   padding-bottom: 20px;
-// }
 
 header {
   &.navbar {
@@ -23,6 +17,9 @@ header {
   background-color: $headerColor;
 
   .nav > li > a, a {
+    font-weight: bold;
+    // box-sizing: border-box;
+    // height: 100%;
     color: $linkColor;
     &:hover {
       // background-color: transparent;
@@ -47,6 +44,7 @@ header {
     fill: $hoverColor
   }
 
+
   a {
     color: $shade;
     border-bottom: 0;
@@ -65,24 +63,13 @@ header {
   border-width: 0 0 0;
 }
 
-// @media screen and (max-width: 768px) {
-//   header {
-//     .nav > li > a, a {
-//       &:hover {
-//         background-color: #EEE;
-//       }
-//     }
-//   }
-
-// }
-
 /*------------------------------------*\
     $FOOTER
 \*------------------------------------*/
 $footerLink: $paperGreyTextureColor;
 
 footer {
-  padding: 4% 0;
+  padding: 4% 0 20px;
   // margin-top: 3%;
   color: $footerLink;
   background-color: $shade;
@@ -167,6 +154,16 @@ hr {
 }
 
 
+#contactwebmaster {
+  text-align: center;
+  margin-top: 40px;
+
+  li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+}
 
 @media screen and (max-width: 375px) {
   .navholder {

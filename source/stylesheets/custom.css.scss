@@ -1,13 +1,4 @@
 @charset "utf-8";
-/*------------------------------------*\
-    CONTENTS
-\*------------------------------------*/
-/*
-IMPORTS
-MAIN
-CAROUSEL
-*/
-
 
 /*------------------------------------*\
     $VARIABLES
@@ -82,8 +73,6 @@ h1, h2, h3, h4, h5 {
 .jumbotron {
   color: $paperBeigeColor;
   position: relative;
-  // z-index: -10;
-  // background: url(../images/improvclub.jpg) no-repeat fixed; 
   background: url(../images/stage.jpg)  no-repeat; 
   background-position: 50% 62%;
   background-size: cover;
@@ -99,14 +88,7 @@ h1, h2, h3, h4, h5 {
 
 .block1 {
   background: $paperBeigeTexture;
-  a {
-    border-bottom: 2px dotted $orangeDark;
-    color: $shade;
-    &:hover {
-      border-bottom: 3px solid $orangeDark;
-      color: $shade;
-    }
-  }
+
 }
 
 .block2 {
@@ -129,12 +111,23 @@ section {
   }
 }
 
+figcaption {
+  $figcaptionColor: #737373;
+  font-size: 12px;
+  font-style: italic;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: $figcaptionColor;
 
+  a {
+    color: $figcaptionColor;
+  }
+}
 
 /*------------------------------------*\
-    $HOME PAGE
+    $MAIN PAGE
 \*------------------------------------*/
-
 
 .onpaper {
   margin: 30px auto 30px auto;
@@ -145,9 +138,7 @@ section {
   padding: 3% 6%;
 }
 
-/*==================================================
- * Effect 2
- * ===============================================*/
+// $PAPER SHADOW EFFECT
 .effect2
 {
   position: relative;
@@ -189,9 +180,6 @@ section {
 .tinalink {
   font-style: italic;
 }
-// .block3 img {
-//   width: 100%;
-// }
 
 .toastrightpics {
   margin-left: 2%;
@@ -220,7 +208,8 @@ section {
   .oval {
     height: 300px;
     width: 200px;
-    line-height: 300px; //this is impt for vertical align
+    // line-height: 300px; //this is impt for vertical align
+
     border-radius: 50%;
     border: 3px solid white;
     box-shadow: 2px 4px 10px #888;
@@ -237,12 +226,15 @@ section {
     }
 
   }
-  figurecaption {
+
+  figcaption {
+
     span {
       display: block;
     }
     span:first-child {
       margin-top: 10px;
+      font-weight: bold;
     }
   }
 }
@@ -257,7 +249,9 @@ section {
   .circle {
     height: 100px;
     width: 100px;
-    line-height: 100px; //this is impt for vertical align
+    // line-height: 100px; //this is impt for vertical align
+    // vertical-align: text-top;
+
     border-radius: 50%;
     border: 3px solid white;
     box-shadow: 2px 4px 10px #888;
@@ -267,17 +261,16 @@ section {
 
 
     img {
-      height: auto; //switch height & width values if image doesn't cover.
-      width: 100%;
-      // vertical-align: middle;
-      // margin: 0 -100%;
+      height: 100%; //switch height & width values if image doesn't cover.
+      width: auto;
+      margin: 0 -100%;
     }
 
   }
 
 
 
-  figurecaption {
+  figcaption {
     display: table-cell;
     height: 100px;
     vertical-align: middle;
@@ -342,13 +335,15 @@ section {
 }
 
 .wrapper {
-  box-sizing: content-box;
+  // box-sizing: content-box;
+  // margin-left: 30px
 }
 .greetings {
   vertical-align: top;
   display: inline-block;
   width: 66%;
   margin-top: 68px;
+  box-sizing: border-box;
 }
 
 .encloser {
@@ -398,11 +393,29 @@ section {
 
 .secondState {
   max-height: 300vh;
-  transition-property: max-height padding;
+  transition-property: max-height;
   transition-duration: 2.5s;
   transition-timing-function: ease-in-out;
 }
 
+
+.homeAnimation {
+  animation: curtainDown 2.5s ease-in-out;
+  animation-delay: 0.5s;
+  // height: 0;
+  animation-fill-mode: both;
+}
+
+@keyframes curtainDown { 
+  from { max-height: 0; } to { max-height: 300vh; }  
+}
+
+
+.homeTransition {
+  animation: curtainDown 4s linear;
+  animation-delay: 2s;
+  // height: 100%;
+}
 
 
 .placeUnder {

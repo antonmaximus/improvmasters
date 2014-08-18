@@ -3,17 +3,28 @@
     .row
       .col-xs-12.col-sm-12.text-center
         .navholder
-          %a.navicon{ href:'./contact.html', alt:'Contact Us' }
-            %i.fa.fa-envelope-o.fa-2x
-            %span Contact
+          - if build?
+            %a.navicon{ href:'./contact', alt:'Contact Us' }
+              %i.fa.fa-envelope-o.fa-2x
+              %span Contact         
+          - else
+            %a.navicon{ href:'./contact.html', alt:'Contact Us' }
+              %i.fa.fa-envelope-o.fa-2x
+              %span Contact
         .navholder
           %a.navicon{ href:'https://www.facebook.com/pages/ImprovMasters/172130356249549', alt:'', target:'_blank' }
             %i.fa.fa-facebook-square.fa-2x
             %span Like
         .navholder
-          %a.navicon{ href:'./about.html', alt:'About Our Club' }
-            %i.fa.fa-flag.fa-2x
-            %span Our Club
+          - if build?
+            %a.navicon{ href:'./about', alt:'About Our Club' }
+              %i.fa.fa-flag.fa-2x
+              %span Our Club         
+          - else
+            %a.navicon{ href:'./about.html', alt:'About Our Club' }
+              %i.fa.fa-flag.fa-2x
+              %span Our Club
+
     .row
       .col-xs-12
         %hr
@@ -23,6 +34,9 @@
         %ul
           %li 
             %a{ href:'http://en.wikibooks.org/wiki/Improvisational_Acting/Rules', alt:'',  target:'_blank' } Wikibooks on Improv
+          %li 
+            %a{ href:'http://www.dangoldstein.com/howtoimprovise.html', alt:'',  target:'_blank' } Dan Goldstein's Improv Article
+
       .col-xs-8.col-xs-offset-2.col-sm-3.col-sm-offset-0
         %span About Toastmasters
         %ul
@@ -30,3 +44,13 @@
             %a{ href:'http://www.toastmasters.org/', alt:'', target:'_blank' } Toastmasters International
           %li
             %a{ href:'http://www.tmdistrictone.org/', alt:'', target:'_blank' } District One Toastmasters
+
+
+  .container
+    .row
+      .col-xs-12
+        .resources#contactwebmaster
+          %ul
+            %li © 2014 
+            %li 
+              %a#aj-email{href:'#'} Contact Web Master

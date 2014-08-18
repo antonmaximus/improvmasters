@@ -12,7 +12,7 @@ body_class: index
         %h1 Contact Us!
         %p 
           Email us at
-          %a#aj-magic [Enable JavaScript Pls.]
+          %a#targetEmail{href:'#'} [Enable JavaScript Pls.]
           OR fill out the form below.
         .row
           .col-sm-12.col-md-6
@@ -28,18 +28,5 @@ body_class: index
                 %textarea.form-control#exampleInputEmail1{name:'message', type:'email', rows:'5', required:'true'}   
               %button.btn.btn-primary{type:'submit'} Submit
 
-:javascript
-  ;(function() { 
-    function nextChar(c) {
-        return String.fromCharCode(c.charCodeAt(0) + 1);
-    }
-    var x = "mail" + "to" + ":";
-    var y = "improv" + nextChar('l') + 'ast' + nextChar('d') + 'rs' + "\u0040g" + "mai" +"l\u002Eco" + nextChar('l');
-    document.getElementById('aj-magic').href = x + y; 
-    document.getElementById('aj-magic').innerHTML = y;
-
-    var brace = 'http://forms.brace.io/'
-    document.getElementById('forBrace').setAttribute('action', brace + y )
-
-  })();
+= javascript_include_tag "./javascripts/inject_toastmaster_email"
 = partial('./layouts/footer')

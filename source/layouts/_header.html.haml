@@ -7,10 +7,19 @@
         %span.icon-bar
         %span.icon-bar
       %a.navbar-brand{href:'./'}
-        = partial('./layouts/brandsvg')
         / Logo goes here
+        = partial('./layouts/brandsvg')
     .navbar-collapse.collapse
       %nav.collapse.navbar-collapse.navbar-right{role: "navigation"}
         %ul.nav.navbar-nav.navbar-right
           %li.active
-            %a{href:'./members.html'}Members' Area
+            - if build?
+              %a{href:'./members'}
+                / %span.glyphicon.glyphicon-user
+                / %i.fa.fa-users
+                MEMBERS            
+            - else
+              %a{href:'./members.html'}
+                / %span.glyphicon.glyphicon-user
+                / %i.fa.fa-users
+                MEMBERS

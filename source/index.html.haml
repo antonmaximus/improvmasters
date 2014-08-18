@@ -8,7 +8,7 @@ index_options: home
 
 = partial('./layouts/header')
 .jumbotron.jumbotronSpecial
-  .container.firstState.placeUnder
+  .container.placeUnder.homeAnimation
     .intro
       = partial('./layouts/brandsvg')
     %p We provide a safe, fun, and spontaneous environment to practice improvisation, public speaking, and leadership skills all while having fun and relaxing on a Friday night.  
@@ -25,8 +25,10 @@ index_options: home
             %p First-time guests are free to attend. Returning guests are asked for a $5 contribution to help pay for the cost of the room. Those who have joined as members will not have to pay.
             %h2 Become a member!
             %p
-              %a.btn.btn-primary.btn-lg{href:'./newmembers.html', role: "button"} Learn more »
-            / %a{href:'./newmembers', alt:''} Click here to find out how...
+              - if build?
+                %a.btn.btn-primary.btn-lg{href:'./newmembers', role: "button"} Learn more »
+              - else
+                %a.btn.btn-primary.btn-lg{href:'./newmembers.html', role: "button"} Learn more »
           .col-md-4
             %iframe.gmap{frameborder: "0", src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.552180517164!2d-118.38531130000004!3d33.978347999999954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b74ef1997cd5%3A0x653fdf1b2e5403f!2s6666+Green+Valley+Cir%2C+Culver+City%2C+CA+90230!5e0!3m2!1sen!2sus!4v1407260222309", style: "border:0"}
 
@@ -39,16 +41,16 @@ index_options: home
     .row
       .col-md-12
         / %img.pull-right.rightpics{src:'http://cdn.funcheap.com/wp-content/uploads/2014/06/improv.jpg', alt:''}
-        %img.pull-right.rightpics{src:'./images/improvtroupe.jpg', alt:''}
+        %img.pull-right.rightpics{src:'./images/improvpic.jpg', alt:''}
         %h2 How to play improv...
         %div
           %b 1. Always agree, always allow. 
           %p Accept what's offered to you, and say YES to get the scene started.
         %div
           %b 2. Say "Yes, and..."
-          %p It's your turn to contribute.  You have a responsibility to add to the scene. 
+          %p It's your turn to contribute.  Add something to the scene. 
           %b 3. Make Statements.
-          %p Avoid asking open-ended questions as it puts pressure on your partner.  Instead, turn that question into an 'offer' to help build the scene.
+          %p Avoid asking open-ended questions as it puts pressure on your partner.  Instead, turn that question into an 'offer' and initiate to help build the scene.
         %div
           %b 4. Don't try to be funny.
           %p Going for the joke usually kills the scene. Instead, just say the first thing that comes to mind. Humor will come naturally out of the scene without any effort.
